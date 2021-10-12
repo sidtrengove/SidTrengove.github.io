@@ -1,0 +1,136 @@
+<!DOCTYPE HTML>
+<!--
+	Solid State by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-4XRPD3TP16"></script>
+		<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'G-4XRPD3TP16');
+		</script>
+		<title>P3: Working Papers</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Page Wrapper -->
+			<div id="page-wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<ul class="icons">
+							<li><h1><a href="index.html">Home</a></h1></li>
+							<li><h1><a href="https://www.linkedin.com/in/sidney-trengove/" class="icon brands fa-linkedin" target="_blank"></a></h1></li>
+							<li><h1><a href="https://github.com/sidtrengove/PortfolioProjects" class="icon brands fa-github" target="_blank"></a></h1></li>
+						</ul>
+						<nav>
+							<a href="#menu">Menu</a>
+						</nav>
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<div class="inner">
+							<h2>Menu</h2>
+							<ul class="links">
+								<li><a href="index.html#banner">Home</a></li>
+								<li><a href="index.html#to-the-projects">Projects</a></li>
+								<li><a href="index.html#footer">Contact</a></li>
+								<li><a href="courses.html">Accreditations</a></li>
+							</ul>
+							<a href="#" class="close">Close</a>
+						</div>
+					</nav>
+
+				<!-- Wrapper -->
+					<section id="wrapper">
+						<header>
+							<div class="inner">
+								<h2 class = "icon regular fa-file-code">Update links</h2>
+								<p>WORKING PAPERS: EXCEL & VBA</p>
+							</div>
+
+						</header>
+
+						<!-- Content -->
+						<div class="wrapper">
+							<div class="inner">
+
+								<p>Occasionally hyperlinks do not update to their new relative file path under the new months folder.</p>
+								<h3 class="major">Initial Monthly Process (5-40mins)</h3>
+								<ol>
+									<li>Navigate to Sheet</li>
+									<li>Re-link hyperlink</li>
+									<li>Repeat for <u>every</u> broken link</li>
+								</ol>
+
+								<h3 class="major">New Monthly Process (1min)</h3>
+								<ol>
+									<li>Click button</li>
+								</ol>
+								<section >
+									<h3 class="major icon solid fa-code-branch">CODE</h3>
+									<pre><code>Sub ReplaceHyperlinks()
+Dim xWs As Worksheet
+Dim xWss As Sheets
+Dim xHyperlink As Hyperlink
+Dim xOld As String, xNew As String
+
+Set Ws = Application.ActiveSheet
+xOld = Range("PriorFolder")
+xNew = Range("CurrentFolder")
+Application.ScreenUpdating = False
+Set xWss = Application.ActiveWorkbook.Worksheets
+For Each xWs In xWss
+For Each xHyperlink In xWs.Hyperlinks
+xHyperlink.Address = Replace(xHyperlink.Address, xOld, xNew)
+Next
+Next xWs
+Application.ScreenUpdating = True
+										
+End Sub</code></pre>
+								</section>
+
+							</div>
+						</div>
+
+				</section>
+
+
+				<!-- Footer -->
+					<section id="footer">
+						<div class="inner">
+							<h2 class="major">Get in touch</h2>
+							<ul class="contact">
+								<li class="icon solid fa-envelope"><a href="mailto:SidTrengove@gmail.com">SidTrengove@gmail.com</a></li>
+								<li class="icon solid fa-envelope"><a href="mailto:sidney.trengove@chiene.co.uk">Sidney.Trengove@chiene.co.uk</a></li>
+								<li class="icon brands fa-linkedin"><a href="https://www.linkedin.com/in/sidney-trengove/" target="_blank">linkedin.com/in/sidney-trengove/</a></li>
+							</ul>
+							<ul class="copyright">
+								<li>&copy; Untitled Inc. All rights reserved.</li><li>Design: <a href="http://html5up.net" target="_blank">HTML5 UP</a></li>
+							</ul>
+						</div>
+					</section>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

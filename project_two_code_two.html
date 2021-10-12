@@ -1,0 +1,220 @@
+<!DOCTYPE HTML>
+<!--
+	Solid State by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-4XRPD3TP16"></script>
+		<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'G-4XRPD3TP16');
+		</script>
+		<title>P2: London</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<style> html{scroll-behavior: smooth} </style>
+	</head>
+	<body class="is-preload">
+
+		<!-- Page Wrapper -->
+			<div id="page-wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<ul class="icons">
+							<li><h1><a href="index.html">Home</a></h1></li>
+							<li><h1><a href="https://www.linkedin.com/in/sidney-trengove/" class="icon brands fa-linkedin" target="_blank"><span class="label">LinkedIn</a></h1></li>
+							<li><h1><a href="https://github.com/sidtrengove/PortfolioProjects" class="icon brands fa-github" target="_blank"></a></h1></li>
+						</ul>
+						<nav>
+							<a href="#menu">Menu</a>
+						</nav>
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<div class="inner">
+							<h2>Menu</h2>
+							<ul class="links">
+								<li><a href="index.html#banner">Home</a></li>
+								<li><a href="index.html#to-the-projects">Projects</a></li>
+								<li><a href="index.html#footer">Contact</a></li>
+								<li><a href="courses.html">Accreditations</a></li>
+							</ul>
+							<a href="#" class="close">Close</a>
+						</div>
+					</nav>
+
+				<!-- Wrapper -->
+					<section id="wrapper">
+						<section id="wrapper">
+							<header>
+								<div class="inner">
+									<h2 class = "">Step two: POWER QUERY</h2>
+									<p>Cleaning data using Excel’s Power Query</p>
+									<p><a href="#insights" class="button primary fit icon solid solo fa-arrow-down scrolly">Insights below</a></p>
+									<p><a href="project_two_code.html" class="button small fit">Back to the analysis</a></p>
+								</div>
+							</header>
+							<p id="insights"></p>
+	
+
+						<!-- Content -->
+							<div class="wrapper">
+								<div class="inner">
+
+									<h3 class="major">Structure</h3>
+									<p>We now have our data downloaded from the London Data Store however it is not in a useable format for our future analysis. We can use PowerBI is to get the data into a structure which is machine readable.</p>
+									<p><a href="https://github.com/sidtrengove/PortfolioProjects/raw/main/earnings-residence-borough.xlsx" class="button primary small fit">Download Example Query</a></p>
+									<p>Please note allot of the steps we have saved for SQL could be done here in PowerBI. The steps have not been completed here just to demonstrate the use and capabilities of both platforms.</p>
+									<img class="image fit" src="images/db.jpg" alt="">
+
+									<h3 class="major">UK House Price Index</h3>
+									<p>Upon analysis of this file, we will want to take the data from the tabs Sales volume and Average price. We must therefore convert these into tables so they can be picked up by Power Query.
+									We need to pivot out columns so our data becomes long data as opposed to wide. Our next step is then to merge two tables we have chosen to use.</p>
+									<p>I will show the merge step here but will not show it repeated for the other workbooks.</p>
+									<img class="image fit" src="images/csv_house_prices.jpg" alt="">
+									<img class="image fit" src="images/PQ_house_prices.jpg" alt="">
+									<img class="image fit" src="images/PQ_house_prices_merged.jpg" alt="">
+									<p id=more_earn></p>
+									<div class="row">
+										<div class="col-6 col-12-">
+											<p><a href="project_two_code_three.html" class="button small fit">I've had enough! Next step!</a></p>
+										</div>
+										<div class="col-6 col-12-">
+											<p><a href="#more_earn" class="button small fit icon solid solo fa-arrow-down scrolly">I love data! More!</a></p>
+										</div>
+									</div>
+									
+
+									<h3 class="major">Earnings by Place of Residence</h3>
+									<p>We will take the data from the tabs for hourly pay for males and females. We must therefore convert these into tables so they can be picked up by Power Query.
+									We need to pivot out columns so our data becomes long data as opposed to wide. Once we have done this, we can filter the rows out that contain the conf% data. We can apply the above steps quickly to the other table using the advanced editor. Our final step is then to merge two tables we have chosen to use.</p>
+									<img class="image fit" src="images/csv_hourly_pay.jpg" alt="">
+									<img class="image fit" src="images/PQ_pay.jpg" alt="">
+									<p id='more_waste'></p>
+									<div class="row">
+										<div class="col-6 col-12-">
+											<p><a href="project_two_code_three.html" class="button small fit">I've had enough! Next step!</a></p>
+										</div>
+										<div class="col-6 col-12-">
+											<p><a href="#more_waste" class="button small fit icon solid solo fa-arrow-down scrolly">I love data! More!</a></p>
+										</div>
+									</div>
+
+									<h3 class="major">Household Waste Recycling Rates</h3>
+									<p>This data is already pretty clean. We will however note to add borough flags in SQL later – a Left Outer Join should do the trick (this being the right table to ensure no additional boroughs are picked up which we have no other data for).
+									The year column is listed in a different format – this will need correcting. We shall also do this later in SQL.</p>
+									<img class="image fit" src="images/csv_household_recycling.jpg" alt="">
+									<p id='more_jobs'></p>
+									<div class="row">
+										<div class="col-6 col-12-">
+											<p><a href="project_two_code_three.html" class="button small fit">I've had enough! Next step!</a></p>
+										</div>
+										<div class="col-6 col-12-">
+											<p><a href="#more_jobs" class="button small fit icon solid solo fa-arrow-down scrolly">I love data! More!</a></p>
+										</div>
+									</div>
+
+									<h3 class="major">Jobs and Job Density</h3>
+									<p>Much the same as the recycling data, machine readable but the year column is the correct format.</p>
+									<img class="image fit" src="images/csv_job_density.jpg" alt="">
+									<p id='more_dwell'></p>
+									<div class="row">
+										<div class="col-6 col-12-">
+											<p><a href="project_two_code_three.html" class="button small fit">I've had enough! Next step!</a></p>
+										</div>
+										<div class="col-6 col-12-">
+											<p><a href="#more_dwell" class="button small fit icon solid solo fa-arrow-down scrolly">I love data! More!</a></p>
+										</div>
+									</div>
+
+									<h3 class="major">Dwellings</h3>
+									<p>We have a similar situation here as we have seen before. We need to transpose our data, merge a table and add borough flags. We’ll turn everything into tables and use the power query editor to repeat some of the steps described previously.</p>
+									<img class="image fit" src="images/csv_dwellings.jpg" alt="">
+									<img class="image fit" src="images/PQ_dwellings.jpg" alt="">
+									<p id='more_age'></p>
+									<div class="row">
+										<div class="col-6 col-12-">
+											<p><a href="project_two_code_three.html" class="button small fit">I've had enough! Next step!</a></p>
+										</div>
+										<div class="col-6 col-12-">
+											<p><a href="#more_age" class="button small fit icon solid solo fa-arrow-down scrolly">I love data! More!</a></p>
+										</div>
+									</div>
+
+									<h3 class="major">Age Tables</h3>
+									<p>We can again copy the steps above as we have data in a similar layout but with the added bonus of a borough flag this time around!</p>
+									<img class="image fit" src="images/csv_age.jpg" alt="">
+									<img class="image fit" src="images/PQ_age.jpg" alt="">
+									<p id='more_well'></p>
+									<div class="row">
+										<div class="col-6 col-12-">
+											<p><a href="project_two_code_three.html" class="button small fit">I've had enough! Next step!</a></p>
+										</div>
+										<div class="col-6 col-12-">
+											<p><a href="#more_well" class="button small fit icon solid solo fa-arrow-down scrolly">I love data! More!</a></p>
+										</div>
+									</div>
+
+									<h3 class="major">Personal Well-being</h3>
+									<p>We have a bit more of a challenge with this data however there is a tab that contains the mean scores for each year, removing the groupings we see here. We will use this tab as a base point. We then will remove the columns that are blank, transpose the data to make it long and machine readable.
+									We have a fair few queries to merge this time around. Once they are all neatly formatted, this is a simple task.	
+									</p>
+									<img class="image fit" src="images/csv_well_being.jpg" alt="">
+									<img class="image fit" src="images/PQ_wellbeing.jpg" alt="">
+
+									<section>
+										<div class="row">
+										<div class="col-6 col-12-">
+											<p></p>
+											<p><a href="project_two_code_one.html" class="button fit">Prev</a></p>
+										</div>
+										<div class="col-6 col-12-">
+											<p></p>
+											<p><a href="project_two_code_three.html" class="button primary fit">Next</a></p>
+										</div>
+										</div>
+									</section>
+
+								</div>
+							</div>
+							
+
+						</section>
+					</section>
+
+				<!-- Footer -->
+				<section id="footer">
+					<div class="inner">
+						<h2 class="major">Get in touch</h2>
+						<ul class="contact">
+							<li class="icon solid fa-envelope"><a href="mailto:SidTrengove@gmail.com">SidTrengove@gmail.com</a></li>
+							<li class="icon solid fa-envelope"><a href="mailto:sidney.trengove@chiene.co.uk">Sidney.Trengove@chiene.co.uk</a></li>
+							<li class="icon brands fa-linkedin"><a href="https://www.linkedin.com/in/sidney-trengove/" target="_blank">linkedin.com/in/sidney-trengove/</a></li>
+						</ul>
+						<ul class="copyright">
+							<li>&copy; Untitled Inc. All rights reserved.</li><li>Design: <a href="http://html5up.net" target="_blank">HTML5 UP</a></li>
+						</ul>
+					</div>
+				</section>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+	</body>
+</html>

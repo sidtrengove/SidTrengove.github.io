@@ -1,0 +1,165 @@
+<!DOCTYPE HTML>
+<!--
+	Solid State by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-4XRPD3TP16"></script>
+		<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'G-4XRPD3TP16');
+		</script>
+		<title>P3: Working Papers</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Page Wrapper -->
+			<div id="page-wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<ul class="icons">
+							<li><h1><a href="index.html">Home</a></h1></li>
+							<li><h1><a href="https://www.linkedin.com/in/sidney-trengove/" class="icon brands fa-linkedin" target="_blank"></a></h1></li>
+							<li><h1><a href="https://github.com/sidtrengove/PortfolioProjects" class="icon brands fa-github" target="_blank"></a></h1></li>
+						</ul>
+						<nav>
+							<a href="#menu">Menu</a>
+						</nav>
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<div class="inner">
+							<h2>Menu</h2>
+							<ul class="links">
+								<li><a href="index.html#banner">Home</a></li>
+								<li><a href="index.html#to-the-projects">Projects</a></li>
+								<li><a href="index.html#footer">Contact</a></li>
+								<li><a href="courses.html">Accreditations</a></li>
+							</ul>
+							<a href="#" class="close">Close</a>
+						</div>
+					</nav>
+
+				<!-- Wrapper -->
+					<section id="wrapper">
+						<header>
+							<div class="inner">
+								<h2 class = "icon regular fa-file-code">IMPORT TB</h2>
+								<p>WORKING PAPERS: EXCEL & VBA</p>
+
+							</div>
+
+						</header>
+
+						<!-- Content -->
+						<div class="wrapper">
+							<div class="inner">
+
+								<p></p>
+								<p>Exporting and importing the TB is a relatively quick task however can become very repetitive when having to complete this step multiple times throughout the preparation phase.</p>
+								<h3 class="major">Initial Monthly Process (5-20mins)</h3>
+								<ol>
+									<li>Check TB after postings</li>
+									<li>Match to each schedule</li>
+									<li>Update as necessary cells</li>
+									<li>Correct for errors</li>
+									<li>Check TB post correction</li>
+								</ol>
+
+								<h3 class="major">New Monthly Process (4-5min)</h3>
+								<ol>
+									<li>Export TB</li>
+									<li>Save to current DIR</li>
+									<li>Click button</li>
+									<li>Fill down sum formula</li>
+								</ol>
+								<section >
+									<h3 class="major icon solid fa-code-branch">CODE</h3>
+									<p>Grab the TB from current DIR, take relevant data and paste into given range in current Workbook.</p>
+									<pre><code>Sub ImportTB()
+
+'Tell user to wait
+Application.StatusBar = "Please wait ... calculations in progress"
+DoEvents
+Application.ScreenUpdating = False
+
+'Remove existing data from TB
+Sheets("TB").Range("B7:F100").ClearContents
+
+'Create and assign variables
+Dim Location As String
+
+'Save locations
+Location = Application.ActiveWorkbook.Path + "\TB.xlsx"
+
+'Open a workbook
+Workbooks.Open Location, UpdateLinks:=0
+
+'Copy data from csv
+Workbooks("TB.xlsx").Worksheets("Trial Balance").Range("A6:E100").Copy
+
+'Paste data in management accounts
+Workbooks("Working Papers.xlsm").Worksheets("TB").Range("B7").PasteSpecial xlPasteAll
+
+'End copy paste mode
+Application.CutCopyMode = False
+
+'Close a workbook
+Workbooks("TB.xlsx").Close SaveChanges:=False
+
+'Get back to Action Tab
+Workbooks("Working Papers.xlsm").Worksheets("TB").Range("A1").Select
+Sheet5.Select
+
+'Turn sheet back to normal
+Application.ScreenUpdating = True
+Application.StatusBar = ""
+										
+End Sub</code></pre>
+								</section>
+
+							</div>
+						</div>
+
+				</section>
+
+
+				<!-- Footer -->
+					<section id="footer">
+						<div class="inner">
+							<h2 class="major">Get in touch</h2>
+							<ul class="contact">
+								<li class="icon solid fa-envelope"><a href="mailto:SidTrengove@gmail.com">SidTrengove@gmail.com</a></li>
+								<li class="icon solid fa-envelope"><a href="mailto:sidney.trengove@chiene.co.uk">Sidney.Trengove@chiene.co.uk</a></li>
+								<li class="icon brands fa-linkedin"><a href="https://www.linkedin.com/in/sidney-trengove/" target="_blank">linkedin.com/in/sidney-trengove/</a></li>
+							</ul>
+							<ul class="copyright">
+								<li>&copy; Untitled Inc. All rights reserved.</li><li>Design: <a href="http://html5up.net" target="_blank">HTML5 UP</a></li>
+							</ul>
+						</div>
+					</section>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

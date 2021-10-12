@@ -1,0 +1,147 @@
+<!DOCTYPE HTML>
+<!--
+	Solid State by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-4XRPD3TP16"></script>
+		<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'G-4XRPD3TP16');
+		</script>
+		<title>P3: Working Papers</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Page Wrapper -->
+			<div id="page-wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<ul class="icons">
+							<li><h1><a href="index.html">Home</a></h1></li>
+							<li><h1><a href="https://www.linkedin.com/in/sidney-trengove/" class="icon brands fa-linkedin" target="_blank"></a></h1></li>
+							<li><h1><a href="https://github.com/sidtrengove/PortfolioProjects" class="icon brands fa-github" target="_blank"></a></h1></li>
+						</ul>
+						<nav>
+							<a href="#menu">Menu</a>
+						</nav>
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<div class="inner">
+							<h2>Menu</h2>
+							<ul class="links">
+								<li><a href="index.html#banner">Home</a></li>
+								<li><a href="index.html#to-the-projects">Projects</a></li>
+								<li><a href="index.html#footer">Contact</a></li>
+								<li><a href="courses.html">Accreditations</a></li>
+							</ul>
+							<a href="#" class="close">Close</a>
+						</div>
+					</nav>
+
+				<!-- Wrapper -->
+					<section id="wrapper">
+						<header>
+							<div class="inner">
+								<h2 class = "icon regular fa-file-code">SIGN OFF</h2>
+								<p>WORKING PAPERS: EXCEL & VBA</p>
+							</div>
+
+						</header>
+
+						<!-- Content -->
+						<div class="wrapper">
+							<div class="inner">
+
+								<p>Every schedule at each stage of completion requires sign off from either preparer, manager or partner. This requires the individual to type the date and their initials at the top of every schedule. This then must be removed from every schedule at the start of the next period.</p>
+								<h3 class="major">Initial Monthly Process (20mins)</h3>
+								<ol>
+									<li>Remove sign offs from every sheet</li>
+									<li>Navigate to Sheet</li>
+									<li>Type initials</li>
+									<li>Repeat for <u>every</u> Sheet</li>
+								</ol>
+
+								<h3 class="major">New Monthly Process (1min)</h3>
+								<ol>
+									<li>Untick box</li>
+									<li>Tick Box</li>
+								</ol>
+								<section >
+									<h3 class="major icon solid fa-code-branch">CODE</h3>
+									<p>Get todys date and put into relevent cell. Enable if formula to show/hide the pasted date and intials.</p>
+									<p>Preparer</p>
+									<pre><code>Sub CheckBox1_Click()
+If Range("CheckCellP").Value = True Then
+	Range("Today").Copy
+	Range("PrepDateSign").PasteSpecial xlPasteValues
+	Application.CutCopyMode = False
+
+Else: End If
+End Sub</code></pre>
+									<p>Manager</p>
+									<pre><code>Sub CheckBox2_Click()
+If Range("CheckCellR").Value = True Then
+	Range("Today").Copy
+	Range("ManagerDateSign").PasteSpecial xlPasteValues
+	Application.CutCopyMode = False
+
+Else: End If
+End Sub</code></pre>
+									<p>Partner</p>
+									<pre><code>Sub CheckBox3_Click()
+If Range("CheckCellPr").Value = True Then
+	Range("Today").Copy
+	Range("PartnerDateSign").PasteSpecial xlPasteValues
+	Application.CutCopyMode = False
+
+Else: End If
+End Sub</code></pre>
+								</section>
+
+							</div>
+						</div>
+
+				</section>
+
+
+				<!-- Footer -->
+					<section id="footer">
+						<div class="inner">
+							<h2 class="major">Get in touch</h2>
+							<ul class="contact">
+								<li class="icon solid fa-envelope"><a href="mailto:SidTrengove@gmail.com">SidTrengove@gmail.com</a></li>
+								<li class="icon solid fa-envelope"><a href="mailto:sidney.trengove@chiene.co.uk">Sidney.Trengove@chiene.co.uk</a></li>
+								<li class="icon brands fa-linkedin"><a href="https://www.linkedin.com/in/sidney-trengove/" target="_blank">linkedin.com/in/sidney-trengove/</a></li>
+							</ul>
+							<ul class="copyright">
+								<li>&copy; Untitled Inc. All rights reserved.</li><li>Design: <a href="http://html5up.net" target="_blank">HTML5 UP</a></li>
+							</ul>
+						</div>
+					</section>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

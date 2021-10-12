@@ -1,0 +1,190 @@
+<!DOCTYPE HTML>
+<!--
+	Solid State by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-4XRPD3TP16"></script>
+		<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'G-4XRPD3TP16');
+		</script>
+		<title>P2: London</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<style> html{scroll-behavior: smooth} </style>
+	</head>
+	<body class="is-preload">
+
+		<!-- Page Wrapper -->
+			<div id="page-wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<ul class="icons">
+							<li><h1><a href="index.html">Home</a></h1></li>
+							<li><h1><a href="https://www.linkedin.com/in/sidney-trengove/" class="icon brands fa-linkedin" target="_blank"><span class="label">LinkedIn</a></h1></li>
+							<li><h1><a href="https://github.com/sidtrengove/PortfolioProjects" class="icon brands fa-github" target="_blank"></a></h1></li>
+						</ul>
+						<nav>
+							<a href="#menu">Menu</a>
+						</nav>
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<div class="inner">
+							<h2>Menu</h2>
+							<ul class="links">
+								<li><a href="index.html#banner">Home</a></li>
+								<li><a href="index.html#to-the-projects">Projects</a></li>
+								<li><a href="index.html#footer">Contact</a></li>
+								<li><a href="courses.html">Accreditations</a></li>
+							</ul>
+							<a href="#" class="close">Close</a>
+						</div>
+					</nav>
+
+				<!-- Wrapper -->
+					<section id="wrapper">
+						<section id="wrapper">
+							<header>
+								<div class="inner">
+									<h2 class = "">Step three: SQL</h2>
+									<p>Cleaning in Microsoft SQL Server Management Studio</p>
+									<p><a href="#insights" class="button primary fit icon solid solo fa-arrow-down scrolly">Insights below</a></p>
+									<p><a href="project_two_code.html" class="button small fit">Back to the analysis</a></p>
+								</div>
+							</header>
+							<p id="insights"></p>
+	
+
+						<!-- Content -->
+							<div class="wrapper">
+								<div class="inner">
+
+									<h3 class="major">SQL</h3>
+									<p>Moving onto SQL. Microsoft SQL Server Management Studio to be precise. Most companies use SQL to essentially to as it says – query their servers. What does that mean? Well, it’s almost like asking a librarian to retrieve a few books for you.</p>
+									<img class="image fit" src="images/sql_library.jpg" alt="">
+									<p>SQL offers us the chance to read in our data from csv, clean & merge everything into neat tables and finally investigate what our data holds (we’ll do this in our EDA).</p>
+									<p>You will see throughout the code: comments and logical names. This is considered best practice to ensure readability.</p>
+									<p><a href="https://github.com/sidtrengove/PortfolioProjects/blob/c0388fc2e742e6199a35a95ad45307594600eb25/SQL_london.sql" class="button primary fit small" target="_blank">full script</a></p>
+
+									<h3 class="major">Importing the data</h3>
+									<p>We first import our data using the SQL Server’s import & export tool. We can read this into the Server by selecting our input source as Excel and browsing to the xlsx file we want to upload. </p>
+									<p>We then select our input source as ‘SQL Server Native Client’ and also selecting the correct Server name and Database to read the data into. </p>
+									<img class="image fit" src="images/sql_upload.jpg" alt="">
+									<p>All that is left is to follow the rest of the wizard and repeat for each of our files. Once we have these files in, they are each represented as a table within SQL Server. It would be useful to make sure they have an appropriate name as we will be using these names throughout our SQL Script. This will act to make our code more legible; a very important factor when trying to review our code or even more so when someone else is trying to review our code. We can achieve this renaming using the GUI.</p>
+
+									<div class="row">
+										<div class="col-6 col-12-medium">
+											<h3 class="major">/* AGE DATA */</h3>
+											<a href="https://github.com/sidtrengove/PortfolioProjects/blob/c0388fc2e742e6199a35a95ad45307594600eb25/SQL_london.sql" target="_blank"><img class="image fit" src="images/sql_age_data.JPG" alt=""></a>
+										</div>
+										<div class="col-6 col-12-medium">
+											<h3 class="major">/* DWELLINGS DATA */</h3>
+											<a href="https://github.com/sidtrengove/PortfolioProjects/blob/c0388fc2e742e6199a35a95ad45307594600eb25/SQL_london.sql" target="_blank"><img class="image fit" src="images/sql_dwellings_data.JPG" alt=""></a>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-6 col-12-medium">
+											<h3 class="major">/* RECYCLING DATA */</h3>
+											<a href="https://github.com/sidtrengove/PortfolioProjects/blob/c0388fc2e742e6199a35a95ad45307594600eb25/SQL_london.sql" target="_blank"><img class="image fit" src="images/sql_recycling_data.JPG" alt=""></a>
+										</div>
+										<div class="col-6 col-12-medium">
+											<h3 class="major">/* JOBS DATA */</h3>
+											<a href="https://github.com/sidtrengove/PortfolioProjects/blob/c0388fc2e742e6199a35a95ad45307594600eb25/SQL_london.sql" target="_blank"><img class="image fit" src="images/sql_jobs_data.JPG" alt=""></a>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-6 col-12-medium">
+											<h3 class="major">/* PAY DATA */ --part one</h3>
+											<a href="https://github.com/sidtrengove/PortfolioProjects/blob/c0388fc2e742e6199a35a95ad45307594600eb25/SQL_london.sql" target="_blank"><img class="image fit" src="images/sql_pay_data_partone.JPG" alt=""></a>
+										</div>
+										<div class="col-6 col-12-medium">
+											<h3 class="major">/* PAY DATA */ --part two</h3>
+											<a href="https://github.com/sidtrengove/PortfolioProjects/blob/c0388fc2e742e6199a35a95ad45307594600eb25/SQL_london.sql" target="_blank"><img class="image fit" src="images/sql_pay_data_parttwo.JPG" alt=""></a>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-6 col-12-medium">
+											<h3 class="major">/* WELL BEING DATA */</h3>
+											<a href="https://github.com/sidtrengove/PortfolioProjects/blob/c0388fc2e742e6199a35a95ad45307594600eb25/SQL_london.sql" target="_blank"><img class="image fit" src="images/sql_wellbeing_data.JPG" alt=""></a>
+										</div>
+										<div class="col-6 col-12-medium">
+											<h3 class="major">/* HOUSING DATA */ --part one</h3>
+											<a href="https://github.com/sidtrengove/PortfolioProjects/blob/c0388fc2e742e6199a35a95ad45307594600eb25/SQL_london.sql" target="_blank"><img class="image fit" src="images/sql_housing_data_partone.JPG" alt=""></a>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-6 col-12-medium">
+											<h3 class="major">/* HOUSING DATA */ --part two</h3>
+											<a href="https://github.com/sidtrengove/PortfolioProjects/blob/c0388fc2e742e6199a35a95ad45307594600eb25/SQL_london.sql" target="_blank"><img class="image fit" src="images/sql_housing_data_parttwo.JPG" alt=""></a>
+										</div>
+										<div class="col-6 col-12-medium">
+											<h3 class="major">/* HOUSING DATA */ --part three</h3>
+											<a href="https://github.com/sidtrengove/PortfolioProjects/blob/c0388fc2e742e6199a35a95ad45307594600eb25/SQL_london.sql" target="_blank"><img class="image fit" src="images/sql_housing_data_partthree.JPG" alt=""></a>
+										</div>
+									</div>
+
+									<h3 class="major">Combine Clean Tables</h3>
+									<a href="https://github.com/sidtrengove/PortfolioProjects/blob/c0388fc2e742e6199a35a95ad45307594600eb25/SQL_london.sql" target="_blank"><img class="image fit" src="images/sql_tables_combine.JPG" alt=""></a>
+									<a href="https://github.com/sidtrengove/PortfolioProjects/blob/c0388fc2e742e6199a35a95ad45307594600eb25/SQL_london.sql" target="_blank"><img class="image fit" src="images/sql_combine.JPG" alt=""></a>
+
+									<h3 class="major">Clean Combined Tables</h3>
+									<a href="https://github.com/sidtrengove/PortfolioProjects/blob/c0388fc2e742e6199a35a95ad45307594600eb25/SQL_london.sql" target="_blank"><img class="image fit" src="images/sql_clean_combined.JPG" alt=""></a>
+			
+									<section>
+										<div class="row">
+										<div class="col-6 col-12-medium">
+											<p></p>
+											<p><a href="project_two_code_two.html" class="button fit">Prev</a></p>
+										</div>
+										<div class="col-6 col-12-medium">
+											<p></p>
+											<p><a href="project_two_code_four.html" class="button primary fit">Next</a></p>
+										</div>
+										</div>
+									</section>
+
+								</div>
+							</div>
+							
+						</section>
+
+					</section>
+
+				<!-- Footer -->
+				<section id="footer">
+					<div class="inner">
+						<h2 class="major">Get in touch</h2>
+						<ul class="contact">
+							<li class="icon solid fa-envelope"><a href="mailto:SidTrengove@gmail.com">SidTrengove@gmail.com</a></li>
+							<li class="icon solid fa-envelope"><a href="mailto:sidney.trengove@chiene.co.uk">Sidney.Trengove@chiene.co.uk</a></li>
+							<li class="icon brands fa-linkedin"><a href="https://www.linkedin.com/in/sidney-trengove/" target="_blank">linkedin.com/in/sidney-trengove/</a></li>
+						</ul>
+						<ul class="copyright">
+							<li>&copy; Untitled Inc. All rights reserved.</li><li>Design: <a href="http://html5up.net" target="_blank">HTML5 UP</a></li>
+						</ul>
+					</div>
+				</section>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+	</body>
+</html>

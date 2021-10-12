@@ -1,0 +1,220 @@
+<!DOCTYPE HTML>
+<!--
+	Solid State by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-4XRPD3TP16"></script>
+		<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'G-4XRPD3TP16');
+		</script>
+		<title>P2: London</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<style> html{scroll-behavior: smooth} </style>
+	</head>
+	<body class="is-preload">
+
+		<!-- Page Wrapper -->
+			<div id="page-wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<ul class="icons">
+							<li><h1><a href="index.html">Home</a></h1></li>
+							<li><h1><a href="https://www.linkedin.com/in/sidney-trengove/" class="icon brands fa-linkedin" target="_blank"><span class="label">LinkedIn</a></h1></li>
+							<li><h1><a href="https://github.com/sidtrengove/PortfolioProjects" class="icon brands fa-github" target="_blank"></a></h1></li>
+						</ul>
+						<nav>
+							<a href="#menu">Menu</a>
+						</nav>
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<div class="inner">
+							<h2>Menu</h2>
+							<ul class="links">
+								<li><a href="index.html#banner">Home</a></li>
+								<li><a href="index.html#to-the-projects">Projects</a></li>
+								<li><a href="index.html#footer">Contact</a></li>
+								<li><a href="courses.html">Accreditations</a></li>
+							</ul>
+							<a href="#" class="close">Close</a>
+						</div>
+					</nav>
+
+				<!-- Wrapper -->
+					<section id="wrapper">
+						<section id="wrapper">
+							<header>
+								<div class="inner">
+									<h2 class = "">Step one: AQUISITION</h2>
+									<p>Acquiring our data from the London Data Store</p>
+									<p><a href="#insights" class="button primary fit icon solid solo fa-arrow-down scrolly">Insights below</a></p>
+									<p><a href="project_two_code.html" class="button small fit">Back to the analysis</a></p>
+								</div>
+							</header>
+							<p id="insights"></p>
+	
+
+						<!-- Content -->
+							<div class="wrapper">
+								<div class="inner">
+
+									<h3 class="major">Initial research</h3>
+									<p>I started my search like most analysts would. Looking for readily available, clean datasets. <u>Kaggle</u> is a great place for this. Kaggle is a site that allows users to find, publish and collectively explore datasets.</p>
+									<a href="https://www.kaggle.com/justinas/housing-in-london" target="_blank"><img class="image fit" src="images/kaggle.JPG" alt=""></a>
+									<p>I found a good dataset on ‘housing in London’. This provided me insights into what data was possible to acquire.</p>
+									<p>Upon further investigation I found that data <u>only went up until the end of 2019</u>. Being more interested in current events and the possibility of improving the dataset I set out to build my own dataset using the London Data Store as referenced in the description of the Kaggle data.</p>
+
+									<h3 class="major">Discovery</h3>
+									<p>The London Data Store offers all sorts of publicly available information of the city of London and each of its boroughs. Thankfully this means that we don’t have to go round London trying to collect the data ourselves! </p>
+									<a href="https://data.london.gov.uk/" target="_blank"><img class="image fit" src="images/LDS.jpg" alt=""></a>
+									<p>Significant amounts of data sets are publicly available however we must have the licence to use this data in our analysis. The Data contained on the London Data Store has been released under <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/" target="_blank">UK Open Government License v2 and v3</a> and therefore we may use this for public analysis.</p>
+
+									<h3 class="major">Collection</h3>
+									<p>Now we have decided on improving upon the initial Kaggle dataset we found, we must now act to locate and acquire the data outlined in from the initial source. We will download the most up to date data and hope none of the previous data has disappeared from the site!</p>
+									<p>Most of the data was thankfully still available ready for download in a csv format. This is perfect as we will be able to manipulate this with Power Query in Excel and import this into Microsoft SQL Server Management Studio.</p>
+									<a href="https://data.london.gov.uk/" target="_blank"><img class="image fit" src="images/LDS_csv.jpg" alt=""></a>
+									<p>I have detailed out all the datasets below so that if you are interested you can also view, download and build your own set. Just follow along!</p>
+									
+									<h3 class="major">Datasets</h3>
+									<section class="tiles">
+										<article class="style1">
+											<span class="image">
+												<img src="images/LDS_houses.jpg" alt="" />
+											</span>
+											<a href="https://data.london.gov.uk/dataset/uk-house-price-index" target="_blank">
+												<h2>UK House Price Index</h2>
+												<div class="content">
+													<p>changes in the value of residential properties</p>
+												</div>
+											</a>
+										</article>
+										<article class="style2">
+											<span class="image">
+												<img src="images/LDS_money.jpg" alt="" />
+											</span>
+											<a href="https://data.london.gov.uk/dataset/earnings-place-residence-borough" target="_blank">
+												<h2>Earnings by Place of Residence</h2>
+												<div class="content">
+													<p>Annual Survey of Hours and Earnings (ASHE)</p>
+												</div>
+											</a>
+										</article>
+										<article class="style3">
+											<span class="image">
+												<img src="images/LDS_environ.jpg" alt="" />
+											</span>
+											<a href="https://data.london.gov.uk/dataset/household-waste-recycling-rates-borough" target="_blank">
+												<h2>Household Waste Recycling Rates</h2>
+												<div class="content">
+													<p>household waste which is recycled or composted</p>
+												</div>
+											</a>
+										</article>
+										<article class="style4">
+											<span class="image">
+												<img src="images/LDS_jobs.jpg" alt="" />
+											</span>
+											<a href="https://data.london.gov.uk/dataset/jobs-and-job-density-borough" target="_blank">
+												<h2>Jobs and Job Density</h2>
+												<div class="content">
+													<p>number of jobs in an area - Residents & Commuters</p>
+												</div>
+											</a>
+										</article>
+										<article class="style5">
+											<span class="image">
+												<img src="images/LDS_dwellings.jpg" alt="" />
+											</span>
+											<a href="https://data.london.gov.uk/dataset/number-and-density-of-dwellings-by-borough" target="_blank">
+												<h2>Dwellings</h2>
+												<div class="content">
+													<p>stock estimates by local authority</p>
+												</div>
+											</a>
+										</article>
+										<article class="style6">
+											<span class="image">
+												<img src="images/LDS_age.jpg" alt="" />
+											</span>
+											<a href="https://data.london.gov.uk/dataset/ons-mid-year-population-estimates-custom-age-tables" target="_blank">
+												<h2>Age Tables</h2>
+												<div class="content">
+													<p>estimates, covering each year between 1999 and 2020</p>
+												</div>
+											</a>
+										</article>
+										<article><!-- placeholder --></article>
+										<article class="style2">
+											<span class="image">
+												<img src="images/LDS_happy.jpg" alt="" />
+											</span>
+											<a href="https://data.london.gov.uk/dataset/subjective-personal-well-being-borough" target="_blank">
+												<h2>Personal Well-being</h2>
+												<div class="content">
+													<p>Estimates of personal well-being from the Annual Population Survey (APS)</p>
+												</div>
+											</a>
+										</article>
+										<article><!-- placeholder --></article>
+						
+									</section>
+
+									<section>
+										<div class="row">
+										<div class="col-6 col-12-">
+											<p></p>
+											<p id=linkback><a href="#linkback" class="button fit disabled">Prev</a></p>
+										</div>
+										<div class="col-6 col-12-">
+											<p></p>
+											<p><a href="project_two_code_two.html" class="button primary fit">Next</a></p>
+										</div>
+										</div>
+									</section>
+
+								</div>
+							</div>
+							
+						</section>
+
+					</section>
+
+				<!-- Footer -->
+				<section id="footer">
+					<div class="inner">
+						<h2 class="major">Get in touch</h2>
+						<ul class="contact">
+							<li class="icon solid fa-envelope"><a href="mailto:SidTrengove@gmail.com">SidTrengove@gmail.com</a></li>
+							<li class="icon solid fa-envelope"><a href="mailto:sidney.trengove@chiene.co.uk">Sidney.Trengove@chiene.co.uk</a></li>
+							<li class="icon brands fa-linkedin"><a href="https://www.linkedin.com/in/sidney-trengove/" target="_blank">linkedin.com/in/sidney-trengove/</a></li>
+						</ul>
+						<ul class="copyright">
+							<li>&copy; Untitled Inc. All rights reserved.</li><li>Design: <a href="http://html5up.net" target="_blank">HTML5 UP</a></li>
+						</ul>
+					</div>
+				</section>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+	</body>
+</html>

@@ -1,0 +1,267 @@
+<!DOCTYPE HTML>
+<!--
+	Solid State by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-4XRPD3TP16"></script>
+		<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'G-4XRPD3TP16');
+		</script>
+		<title>P3: Working Papers</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Page Wrapper -->
+			<div id="page-wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<ul class="icons">
+							<li><h1><a href="index.html">Home</a></h1></li>
+							<li><h1><a href="https://www.linkedin.com/in/sidney-trengove/" class="icon brands fa-linkedin" target="_blank"></a></h1></li>
+							<li><h1><a href="https://github.com/sidtrengove/PortfolioProjects" class="icon brands fa-github" target="_blank"></a></h1></li>
+						</ul>
+						<nav>
+							<a href="#menu">Menu</a>
+						</nav>
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<div class="inner">
+							<h2>Menu</h2>
+							<ul class="links">
+								<li><a href="index.html#banner">Home</a></li>
+								<li><a href="index.html#to-the-projects">Projects</a></li>
+								<li><a href="index.html#footer">Contact</a></li>
+								<li><a href="courses.html">Accreditations</a></li>
+							</ul>
+							<a href="#" class="close">Close</a>
+						</div>
+					</nav>
+
+				<!-- Wrapper -->
+					<section id="wrapper">
+						<header>
+							<div class="inner">
+								<h2 class = "icon regular fa-file-code">Roll forward</h2>
+								<p>WORKING PAPERS: EXCEL & VBA</p>
+							</div>
+
+						</header>
+
+						<!-- Content -->
+						<div class="wrapper">
+							<div class="inner">
+
+								<p>The rolling forward of Working Papers was my initial reason for undertaking the project. </p>
+								<h3 class="major">Initial Process</h3>
+								
+
+										<div class="row">
+											<div class="col-6 col-12-medium">
+												<h4>Monthly (75-90mins):</h4>
+												<ol>
+													<li>Navigate to Sheet</li>
+													<li>Copy all columns less one month</li>
+													<li>Paste 2 columns to the right</li>
+													<li>Head columns for the correct date</li>
+													<li>Re-title for Sheet for current month</li>
+													<li>Remove sign offs</li>
+													<li>Re-link any cells</li>
+													<li>Repeat for <u>every</u> Sheet in workings</li>
+												</ol>
+											</div>
+											<div class="col-6 col-12-medium">
+												<h4>Year end (90-105mins):</h4>
+												<ol>
+													<li>Repeat the monthly steps</li>
+													<li>Copy initial column</li>
+													<li>Paste over prior year column</li>
+													<li>Head prior year column with the correct date</li>
+													<li>Repeat for <u>every</u> Sheet in workings</li>
+												</ol>
+											</div>
+										</div>
+
+								<h3 class="major">New Process</h3>
+										<div class="row">
+											<div class="col-6 col-12-medium">
+												<h4>Monthly (1min):</h4>
+												<ol>
+													<li>Untick roll forward & sign off Boxes</li>
+													<li>Tick boxes</li>
+												</ol>
+											</div>
+											<div class="col-6 col-12-medium">
+												<h4>Year end (1min):</h4>
+												<ol>
+													<li>Untick roll forward & sign off Boxes</li>
+													<li>Tick boxes</li>
+												</ol>
+											</div>
+										</div>
+								<section >
+									<h3 class="major icon solid fa-code-branch">CODE</h3>
+									<h4>Call main code from relative cell</h4>
+									<p>The code must remain reusable for each check box which defines the named range it will connect to.</p>
+									<pre><code>Option Explicit
+Sub RollFwd()
+
+Dim I As String
+
+'Set FA as variable name
+I = Range(ActiveSheet.CheckBoxes(Application.Caller).LinkedCell).Offset(0, -2).Value
+
+'Run Copy Paste Module
+Call CopyPaste(I)
+
+End Sub</code></pre>
+									<h4>Main code block</h4>
+									<p>Each Range which will be copy/pasted/cleared is named & prefixed with its Sheet name. The call function provides the prefix for the named range defined next to each check box. Each Sheet may then be built as needed using the pre-defined script.</p>
+									<p>If you're interested in seeing the code below, please reach out <a href="https://www.linkedin.com/in/sidney-trengove/" target="_blank">@sidtrengove</a></p>
+									<pre><code id="blur">Sub CopyPaste(ByVal I As String)
+
+'Define Variables
+Dim StringOne As String
+Dim StringTwo As String
+Dim StringThree As String
+Dim StringFour As String
+Dim StringFive As String
+Dim StringSix As String
+Dim StringSeven As String
+Dim StringEight As String
+Dim StringNine As String
+Dim StringTen As String
+Dim StringEleven As String
+Dim StringTwelve As String
+Dim StringThirteen As String
+Dim StringFourteen As String
+
+
+'Create Variable Strings with I as variable
+StringOne = I & "Copy"
+StringTwo = I & "Paste"
+StringThree = I & "Clear"
+StringFour = I & "CopyYE"
+StringFive = I & "PasteYE"
+StringSix = I & "ClearYE"
+StringSeven = I & "CopyExtra"
+StringEight = I & "PasteExtra"
+StringNine = I & "ClearExtra"
+StringTen = I & "CopyExtraYE"
+StringEleven = I & "PasteExtraYE"
+StringTwelve = I & "ClearExtraYE"
+StringThirteen = "ReportingMonth"
+StringFourteen = I & "PasteDate""
+
+
+'Run Copy Paste Actions with set variables
+If Range("##removed to prevent html inspect##").Value = True Then
+    
+    'For the purpose of no clear area
+    "##removed to prevent html inspect##"
+    
+	"##removed to prevent html inspect##"
+    
+    'Set YE areas
+    Dim CopyAreaYE As Range: Set CopyAreaYE = Range(StringFour)
+    Dim PasteAreaYE As Range: Set PasteAreaYE = Range(StringFive)
+
+    'Set extra areas
+    Dim CopyAreaExtra As Range: Set CopyAreaExtra = Range(StringSeven)
+    Dim PasteAreaExtra As Range: Set PasteAreaExtra = Range(StringEight)
+    Dim ClearAreaExtra As Range: Set ClearAreaExtra = Range(StringNine)
+    
+    'Set YE extra areas
+    Dim CopyAreaExtraYE As Range: Set CopyAreaExtraYE = Range(StringTen)
+    Dim PasteAreaExtraYE As Range: Set PasteAreaExtraYE = Range(StringEleven)
+    Dim ClearAreaExtraYE As Range: Set ClearAreaExtraYE = Range(StringTwelve)
+    
+    'Set date area
+    "##removed to prevent html inspect##"
+	"##removed to prevent html inspect##"
+    
+    'Copy and paste YE
+        If Range("MonthNumber").Value = 1 Then
+            "##removed to prevent html inspect##"
+            "##removed to prevent html inspect##"
+            Application.CutCopyMode = False
+			"##removed to prevent html inspect##"
+            
+            'Extra
+            CopyAreaExtraYE.Copy
+            PasteAreaExtraYE.PasteSpecial xlPasteValues
+			"##removed to prevent html inspect##"
+			"##removed to prevent html inspect##"
+            
+        End If
+    
+    'Copy and paste month to month
+    CopyArea.Copy
+    PasteArea.PasteSpecial xlPasteValues
+    Application.CutCopyMode = False
+    
+	"##removed to prevent html inspect##"
+    
+    'Copy and paste date
+    "##removed to prevent html inspect##"
+    "##removed to prevent html inspect##"
+    Application.CutCopyMode = False
+    
+    'Clear
+    "##removed to prevent html inspect##"
+    
+    'Clear extra
+    "##removed to prevent html inspect##"
+
+End If
+
+End Sub</code></pre>
+								</section>
+
+							</div>
+						</div>
+
+				</section>
+
+
+				<!-- Footer -->
+					<section id="footer">
+						<div class="inner">
+							<h2 class="major">Get in touch</h2>
+							<ul class="contact">
+								<li class="icon solid fa-envelope"><a href="mailto:SidTrengove@gmail.com">SidTrengove@gmail.com</a></li>
+								<li class="icon solid fa-envelope"><a href="mailto:sidney.trengove@chiene.co.uk">Sidney.Trengove@chiene.co.uk</a></li>
+								<li class="icon brands fa-linkedin"><a href="https://www.linkedin.com/in/sidney-trengove/" target="_blank">linkedin.com/in/sidney-trengove/</a></li>
+							</ul>
+							<ul class="copyright">
+								<li>&copy; Untitled Inc. All rights reserved.</li><li>Design: <a href="http://html5up.net" target="_blank">HTML5 UP</a></li>
+							</ul>
+						</div>
+					</section>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

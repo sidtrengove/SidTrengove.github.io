@@ -1,0 +1,170 @@
+<!DOCTYPE HTML>
+<!--
+	Solid State by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-4XRPD3TP16"></script>
+		<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'G-4XRPD3TP16');
+		</script>
+		<title>P2: London</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<style> html{scroll-behavior: smooth} </style>
+	</head>
+	<body class="is-preload">
+
+		<!-- Page Wrapper -->
+			<div id="page-wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<ul class="icons">
+							<li><h1><a href="index.html">Home</a></h1></li>
+							<li><h1><a href="https://www.linkedin.com/in/sidney-trengove/" class="icon brands fa-linkedin" target="_blank"></a></h1></li>
+							<li><h1><a href="https://github.com/sidtrengove/PortfolioProjects" class="icon brands fa-github" target="_blank"></a></h1></li>
+						</ul>
+						<nav>
+							<a href="#menu">Menu</a>
+						</nav>
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<div class="inner">
+							<h2>Menu</h2>
+							<ul class="links">
+								<li><a href="index.html#banner">Home</a></li>
+								<li><a href="index.html#to-the-projects">Projects</a></li>
+								<li><a href="index.html#footer">Contact</a></li>
+								<li><a href="courses.html">Accreditations</a></li>
+							</ul>
+							<a href="#" class="close">Close</a>
+						</div>
+					</nav>
+
+				<!-- Wrapper -->
+					<section id="wrapper">
+						<header>
+							<div class="inner">
+								<h2>Findings</h2>
+								<p>An investigation into London data using Data Analytics using Machine Learning, SQL, Power Query & Tableau</p>
+								<ul class="actions stacked">
+									<p><a href="#insights" class="button primary fit icon solid solo fa-arrow-down scrolly">Insights below</a></p>
+									<p><a href="project_two.html" class="button small fit">Back to the overview</a></p>
+								</ul>
+							</div>
+
+							<p id="insights"></p>
+						</header>
+
+						<!-- Content -->
+							<div class="wrapper">
+								<div class="inner">
+
+									<h3 class="major">SQL: Exploratory data analysis</h3>
+									<p>Looks like the wealthiest boroughs are Kensington & Chelsea, Westminster and Camden.</p>
+									<span class="image fit"><img src="images/SQL_EDA_top_areas_find.jpg" alt="" /></span>
+									<p>When we explore the data associated with the borough of Kensington & Chelsea, we see the relative equal number of males and females, 7.38 happiness, middle aged (35-41) & a low number of children.</p>
+									<p>It would therefore seem that most wealthy people therefore seem that the population was made up of middle-aged couples with possibly one child.</p>
+									<span class="image fit"><img src="images/SQL_EDA_kensington_find.jpg" alt="" /></span>
+									<span class="image fit"><img src="images/SQL_EDA_kensington_mf_find.jpg" alt="" /></span>
+									<p>It would also be of interest to look into the least wealthy brough, Barking & Dagenham. Relative equal number of males and females, 7.67 happiness, young aged (0-10), high number of children.</p>
+									<p>It seems logical to assume this area is made up of young parents/large families.</p>
+									<span class="image fit"><img src="images/EDA_SQL_Barking_find.jpg" alt="" /></span>
+									<span class="image fit"><img src="images/SQL_EDA_barking_mf_find.jpg" alt="" /></span>
+									<p><a href="project_two_code_five.html" class="button primary fit small" target="_blank">SQL Workings</a></p>
+
+
+									<h3 class="major">Seaborn: Exploratory data analysis</h3>
+									<p>From this analysis we can see that, as expected, the average price of houses has the highest correlation with hourly pay. In fact, the female hourly pay has the highest correlation with average house price.</p>
+									<span class="image fit"><img src="images/EDA_corr.jpg" alt="" /></span>
+									<p>We see that as we’d expect, as the wages increase, so do the house prices.</p>
+									<span class="image"><img src="images/EDA_fem_price.jpg" alt="" /></span>
+									<p>House prices tend to peak at the end of the year as expected due to prices increasing over time. However interestingly we also see house prices tend to drop in June each year followed by a rapid increase for the latter half of the year. As we’d expect the average prices increase over time.</p>
+									<section>
+										<div class="row">
+										<div class="col-6 col-12-medium">
+											<p></p>
+											<span class="image"><img src="images/EDA_monthly_find.jpg" alt="" /></span>
+										</div>
+										<div class="col-6 col-12-medium">
+											<p></p>
+											<span class="image"><img src="images/EDA_pivot_heat_find.jpg" alt="" /></span>
+										</div>
+										</div>
+									</section>
+									<p><a href="project_two_code_six.html" class="button primary fit small" target="_blank">Seaborn Workings</a></p>
+
+									<h3 class="major">Tableau Dashboard</h3>
+									<ul>
+                                        <li>There is a decreasing trend in number of houses sold.</li>
+                                        <li>The order of most densely populated broughs remains relatively constant.</li>
+                                        <li>Westminster has the lowest female to male hourly pay gap with Richmond having the worst.</li>
+                                        <li>The total London Population has increased by close to 1 million from 2014 to 2020.</li>
+                                        <li>The highest house prices seem to lie upon a line into London from the South West.</li>
+                                        <li>The more centrally placed boroughs have worse recycling rates.</li>
+                                    </ul>
+									<p><a href="https://public.tableau.com/views/London_16331792250820/Dashboard?:language=en-US&:display_count=n&:origin=viz_share_link" class="button fit small" target="_Blank">Tableau</a></p>
+                                    <div class='tableauPlaceholder' id='viz1633671438496' style='position: relative'><noscript><a href='#'><img alt='Dashboard ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Lo&#47;London_16331792250820&#47;Dashboard&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='London_16331792250820&#47;Dashboard' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Lo&#47;London_16331792250820&#47;Dashboard&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1633671438496');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.minWidth='1000px';vizElement.style.maxWidth='1300px';vizElement.style.width='100%';vizElement.style.minHeight='827px';vizElement.style.maxHeight='1427px';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.minWidth='1000px';vizElement.style.maxWidth='1300px';vizElement.style.width='100%';vizElement.style.minHeight='827px';vizElement.style.maxHeight='1427px';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} else { vizElement.style.width='100%';vizElement.style.height='1727px';}                     var scriptElement = document.createElement('script'); scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js'; vizElement.parentNode.insertBefore(scriptElement, vizElement);</script>
+									<br></br>
+									<p><a href="project_two_code_seven.html" class="button primary fit small" target="_blank">Tableau Workings</a></p>
+
+									<h3 class="major">PREDICTIONS (ML)</h3>
+									<p>London house prices are expected to follow a steady increase to 2025.</p>
+									<span class="image fit"><img src="images/fb_modle_london_find.jpg" alt="" /></span>
+									<p>The reasons for the movements in London house prices can be seen below.</p>
+									<span class="image fit"><img src="images/London_houses.gif" alt="" /></span>
+									<p>Given the number of houses sold we can predict the average future house price within £15,282 using Random Forests. Our model explains 99.48% of the variance in house prices. However, given many more factors we were able to precisely predict London house prices to the pound!</p>
+									<p>Looking at just Kingston, I used a trained neural network to predict house prices for May 2023.</p>
+									<p>Our model is predicting</p>
+                                    <ul>
+                                        <li>Actual: May 2021 prices £504,304</li>
+                                        <li>Forecast: May 2023 prices are expected to be £538,698</li>
+                                        <li>Forecast increase: £34,394</li>
+                                    </ul>
+									<p><a href="project_two_code_eight.html" class="button primary fit small" target="_blank">Machine Learning Workings</a></p>
+									<h3 class="major"> </h3>
+									<p><a href="project_two_code.html" class="button fit">See the Full analysis</a></p>
+								</div>
+							</div>
+
+					</section>
+
+				<!-- Footer -->
+					<section id="footer">
+						<div class="inner">
+							<h2 class="major">Get in touch</h2>
+							<ul class="contact">
+								<li class="icon solid fa-envelope"><a href="mailto:SidTrengove@gmail.com">SidTrengove@gmail.com</a></li>
+								<li class="icon solid fa-envelope"><a href="mailto:sidney.trengove@chiene.co.uk">Sidney.Trengove@chiene.co.uk</a></li>
+								<li class="icon brands fa-linkedin"><a href="https://www.linkedin.com/in/sidney-trengove/" target="_blank">linkedin.com/in/sidney-trengove/</a></li>
+							</ul>
+							<ul class="copyright">
+								<li>&copy; Untitled Inc. All rights reserved.</li><li>Design: <a href="http://html5up.net" target="_blank">HTML5 UP</a></li>
+							</ul>
+						</div>
+					</section>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE HTML>
+<!--
+	Solid State by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-4XRPD3TP16"></script>
+		<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'G-4XRPD3TP16');
+		</script>
+		<title>P2: London</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<style> html{scroll-behavior: smooth} </style>
+	</head>
+	<body class="is-preload">
+
+		<!-- Page Wrapper -->
+			<div id="page-wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<ul class="icons">
+							<li><h1><a href="index.html">Home</a></h1></li>
+							<li><h1><a href="https://www.linkedin.com/in/sidney-trengove/" class="icon brands fa-linkedin" target="_blank"><span class="label">LinkedIn</a></h1></li>
+							<li><h1><a href="https://github.com/sidtrengove/PortfolioProjects" class="icon brands fa-github" target="_blank"></a></h1></li>
+						</ul>
+						<nav>
+							<a href="#menu">Menu</a>
+						</nav>
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<div class="inner">
+							<h2>Menu</h2>
+							<ul class="links">
+								<li><a href="index.html#banner">Home</a></li>
+								<li><a href="index.html#to-the-projects">Projects</a></li>
+								<li><a href="index.html#footer">Contact</a></li>
+								<li><a href="courses.html">Accreditations</a></li>
+							</ul>
+							<a href="#" class="close">Close</a>
+						</div>
+					</nav>
+
+				<!-- Wrapper -->
+					<section id="wrapper">
+						<section id="wrapper">
+							<header>
+								<div class="inner">
+									<h2 class = "">GIF</h2>
+									<p>Storytelling using the GIF Library</p>
+									<p><a href="#insights" class="button primary fit icon solid solo fa-arrow-down scrolly">Insights below</a></p>
+									<p><a href="project_two_code_eight.html#models" class="button small fit">Back to Machine Learning overview</a></p>
+								</div>
+							</header>
+							<p id="insights"></p>
+	
+
+						<!-- Content -->
+							<div class="wrapper">
+								<div class="inner">
+
+									<h3 class="major">Telling the story</h3>
+									<p>To organise the data, we first will group it by the dates and take the mean values. We can also get the forecast values from our Prophet model created earlier. We will add our datasets into a DataFrame and combine them.<a href="https://github.com/maxhumber/gif" target="_blank">Documentation</a></p>
+									<img class="image fit" src="images/gif_organise.JPG" alt="">
+									<p>Putting this into a GIF helps a great deal with data storytelling. It lets the user follow along with the journey of increasing house prices with plot twists written out as they occur.</p>
+									<p>We have defined a function that by passing in the date parameters along with the DataFrame we will create a line graph using matplotlib (pyplot). We also add aids to our story being prompts appearing on our GIF using if statements to attribute different characteristics to the plot points.</p>
+									<img class="image fit" src="images/gif_function.JPG" alt="">
+									<p>This plot is formulated by individual data points we will create using a for loop going through each item in our date range column.</p>
+									<img class="image fit" src="images/gif_forloop.JPG" alt="">
+									<p>The for loop saves our gif to file however we can also insert his back into our notebook using and HTML image tag (specifying the source to be our GIF).</p>
+									<img class="image fit" src="images/London_houses.gif" alt="">
+
+									<p><a href="https://www.kaggle.com/korfanakis/housing-in-london-eda-with-pandas-and-gif" target="_blank">Credit for viz help</a></p>
+									<p><a href="https://github.com/maxhumber/gif" target="_blank">Credit for gif Library</a></p>
+
+									<section>
+										<div class="row">
+										<div class="col-6 col-12-medium">
+											<p></p>
+											<p><a href="project_two_code_eight_one.html" class="button fit">Prev</a></p>
+										</div>
+										<div class="col-6 col-12-medium">
+											<p></p>
+											<p><a href="project_two_code_eight_three.html" class="button primary fit">Next</a></p>
+										</div>
+										</div>
+									</section>
+
+								</div>
+							</div>
+							
+						</section>
+
+					</section>
+
+				<!-- Footer -->
+				<section id="footer">
+					<div class="inner">
+						<h2 class="major">Get in touch</h2>
+						<ul class="contact">
+							<li class="icon solid fa-envelope"><a href="mailto:SidTrengove@gmail.com">SidTrengove@gmail.com</a></li>
+							<li class="icon solid fa-envelope"><a href="mailto:sidney.trengove@chiene.co.uk">Sidney.Trengove@chiene.co.uk</a></li>
+							<li class="icon brands fa-linkedin"><a href="https://www.linkedin.com/in/sidney-trengove/" target="_blank">linkedin.com/in/sidney-trengove/</a></li>
+						</ul>
+						<ul class="copyright">
+							<li>&copy; Untitled Inc. All rights reserved.</li><li>Design: <a href="http://html5up.net" target="_blank">HTML5 UP</a></li>
+						</ul>
+					</div>
+				</section>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+	</body>
+</html>

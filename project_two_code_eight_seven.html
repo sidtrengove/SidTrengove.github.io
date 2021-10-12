@@ -1,0 +1,173 @@
+<!DOCTYPE HTML>
+<!--
+	Solid State by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-4XRPD3TP16"></script>
+		<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'G-4XRPD3TP16');
+		</script>
+		<title>P2: London</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<style> html{scroll-behavior: smooth} </style>
+	</head>
+	<body class="is-preload">
+
+		<!-- Page Wrapper -->
+			<div id="page-wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<ul class="icons">
+							<li><h1><a href="index.html">Home</a></h1></li>
+							<li><h1><a href="https://www.linkedin.com/in/sidney-trengove/" class="icon brands fa-linkedin" target="_blank"><span class="label">LinkedIn</a></h1></li>
+							<li><h1><a href="https://github.com/sidtrengove/PortfolioProjects" class="icon brands fa-github" target="_blank"></a></h1></li>
+						</ul>
+						<nav>
+							<a href="#menu">Menu</a>
+						</nav>
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<div class="inner">
+							<h2>Menu</h2>
+							<ul class="links">
+								<li><a href="index.html#banner">Home</a></li>
+								<li><a href="index.html#to-the-projects">Projects</a></li>
+								<li><a href="index.html#footer">Contact</a></li>
+								<li><a href="courses.html">Accreditations</a></li>
+							</ul>
+							<a href="#" class="close">Close</a>
+						</div>
+					</nav>
+
+				<!-- Wrapper -->
+					<section id="wrapper">
+						<section id="wrapper">
+							<header>
+								<div class="inner">
+									<h2 class = "">Neural Nets</h2>
+									<p>Recreating a human brain</p>
+									<p><a href="#insights" class="button primary fit icon solid solo fa-arrow-down scrolly">Insights below</a></p>
+									<p><a href="project_two_code_eight.html#models" class="button small fit">Back to Machine Learning overview</a></p>
+								</div>
+							</header>
+							<p id="insights"></p>
+	
+
+						<!-- Content -->
+							<div class="wrapper">
+								<div class="inner">
+
+									<h3 class="major">Train test split</h3>
+									<p>Lets start with what we already know and train, test, split our data. </p>
+									<p>Using sklearn to split data into a training set and a testing set. We do this so that we have something to measure our model against (test set). The data is split 70% training set and 30% testing set. The random state being set to 1 means that the data will be randomised in the same manner each time we run our model (producing roughly same results each time).</p>
+									<img class="image fit" src="images/ml_nn_tts.JPG" alt="">
+									<h3 class="major">Neural Network</h3>
+									<p>Neural networks are essentially an attempt to recreate how the human brain would process thoughts. Let take this back-to-school, biology class. It would help to picture our function of x’s and y in terms of an actual neuron.</p>
+									<img class="image center" src="images/neuron.jpg" alt="">
+									<p>Let’s download our ways to think, so we possess some neurons of our own, by importing our modules from tensorflow.keras</p>
+									<img class="image fit" src="images/ml_nn_import.JPG" alt="">
+									<p>A neural network can be thought of many of these neurons being put together. Where our input layers are known as x and our output layers are known as ŷ. The mysterious middle layers that are not known are titled our hidden layers.</p>
+									<p>A deep neural network is that which contains 2 or more hidden layers. This is what we will build.</p>
+									<img class="image fit" src="images/neural_net.jpg" alt="">
+									<p>Neural networks take in inputs (x), multiply them by weights (w), and add biases to them (b).</p>
+									<img class="image center" src="images/ml_nn_perception.jpg" alt="">
+									<p>This is the concept of an activation function. Essentially there will be no effect upon our model if we do not overcome our bias term b.</p>
+									<p>If we define our inputs as z = wx + b we can refer to our activation function as f(z)</p>
+									<img class="image fit" src="images/ReLu.jpg" alt="">
+									<p>Lets create our deep neural network. This isn’t too difficult, following best practice by matching the shape of our net to the shape of our data. We won’t add any dropout layers as when testing this it decreased the performance of the model. As you can see we use Rectified Linear Units as our activation function in our layers. We also only want a single point as our output so we define the last point as a single neuron.</p>
+									<img class="image fit" src="images/ml_nn_makenet.JPG" alt="">
+									<p>This leaves the question of how the data actually flows through the neural net, what is ‘adam’ and why are we adding in a loss parameter (mean squared error error)?</p>
+									<p>Well, our result is passed through the activation function (reLu) leading to our output.</p>
+									<p>This output ŷ is the model’s estimation of what it predicts the label to be.</p>
+									<p>We will need to update the network’s weights and biases in order to adjust the accuracy of the model. We determine how these our updated based upon a cost function. This compares our predictions to our actual values, y_test. This is why we have defined loss as a parameter in our model.</p>
+									<p>We also define two more variables being: Sr, the input of a single training sample and; Er, the desired output of that training sample. We can then define our cost model as:</p>
+									<img class="image center" src="images/cost_model.jpg" alt="">
+									<img class="image center" src="images/cost_function.jpg" alt="">
+									<p>To minimise to cost we can think of this in graphical terms. The cost will be minimised where the gradient is zero. Therefore, we want to take smaller and smaller steps as we approach the minimum point to find its exact location. The step size is known as the learning rate.</p>
+									<img class="image center" src="images/cost_gradient.JPG" alt="">
+									<p>We will use Adam as our optimiser which does exactly this (2015, Kingma and Ba published their paper: “Adam: A Method for Stochastic Optimization “).</p>
+									<img class="image center" src="images/adam_optimiser.jpg" alt="">
+									<h3 class="major">Fit the model</h3>
+									<p>Now that our neural net is ready to go, we can fit the model to our data. Our model we then “think things through” 400 times (epochs) working towards reducing our mean squared error.</p>
+									<img class="image fit" src="images/ml_nn_loss.JPG" alt="">
+									<h3 class="major">Model performance</h3>
+									<p>And here we have it a plot of how our error is reduced over the 400 revolutions of the net. Looks pretty good!</p>
+									<img class="image fit" src="images/ml_nn_loss_plot.JPG" alt="">
+									<p>To get a sense of how our model performed we can view a few error metrics provided by sklearn. Looks like our model explained 98.61% of the variance in the data. Not bad! Although to take a reality check here the supreme power of Random Forests has still beaten us here at £24,925 RMSE vs £15,457 RMSE!</p>
+									<img class="image fit" src="images/ml_nn_performance.JPG" alt="">
+									<p>If we plot our errors as a distribution around zero we can see we are pretty accurate!</p>
+									<img class="image fit" src="images/ml_nn_loss_graph.JPG" alt="">
+									<h3 class="major">Predictions</h3>
+									<p>We can take this one step further and use our model to predict something. Of course, that’s its purpose after all. We can work on predicting the house price of Kingston for May 2023 assuming the houses sold were similar to that of the current year.</p>
+									<img class="image fit" src="images/ml_kingston_new.JPG" alt="">
+									<img class="image fit" src="images/ml_kingston_build.JPG" alt="">
+									<p>Now that we have set up our data to be the right shape and have the right values we shall put it into our neural net and see what it can tell us!</p>
+									<img class="image fit" src="images/ml_kingston_output.JPG" alt="">
+									<p>Our model is predicting</p>
+									<ul>
+										<li>Actual: May 2021 prices £504,304</li>
+										<li>Forecast: May 2023 prices are expected to be £538,698</li>
+										<li>Forecast increase: £34,394</li>
+									</ul>
+									<p>And here you have it, one deep neural net complete!</p>
+
+									<section>
+										<div class="row">
+										<div class="col-6 col-12-medium">
+											<p></p>
+											<p><a href="project_two_code_eight_six.html" class="button fit">Prev</a></p>
+										</div>
+										<div class="col-6 col-12-medium">
+											<p></p>
+											<p id="linkback"><a href="#linkback" class="button primary fit disabled">Next</a></p>
+										</div>
+										</div>
+									</section>
+
+								</div>
+							</div>
+							
+						</section>
+
+					</section>
+
+				<!-- Footer -->
+				<section id="footer">
+					<div class="inner">
+						<h2 class="major">Get in touch</h2>
+						<ul class="contact">
+							<li class="icon solid fa-envelope"><a href="mailto:SidTrengove@gmail.com">SidTrengove@gmail.com</a></li>
+							<li class="icon solid fa-envelope"><a href="mailto:sidney.trengove@chiene.co.uk">Sidney.Trengove@chiene.co.uk</a></li>
+							<li class="icon brands fa-linkedin"><a href="https://www.linkedin.com/in/sidney-trengove/" target="_blank">linkedin.com/in/sidney-trengove/</a></li>
+						</ul>
+						<ul class="copyright">
+							<li>&copy; Untitled Inc. All rights reserved.</li><li>Design: <a href="http://html5up.net" target="_blank">HTML5 UP</a></li>
+						</ul>
+					</div>
+				</section>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+	</body>
+</html>

@@ -1,0 +1,144 @@
+<!DOCTYPE HTML>
+<!--
+	Solid State by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-4XRPD3TP16"></script>
+		<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'G-4XRPD3TP16');
+		</script>
+		<title>P3: Working Papers</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Page Wrapper -->
+			<div id="page-wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<ul class="icons">
+							<li><h1><a href="index.html">Home</a></h1></li>
+							<li><h1><a href="https://www.linkedin.com/in/sidney-trengove/" class="icon brands fa-linkedin" target="_blank"></a></h1></li>
+							<li><h1><a href="https://github.com/sidtrengove/PortfolioProjects" class="icon brands fa-github" target="_blank"></a></h1></li>
+						</ul>
+						<nav>
+							<a href="#menu">Menu</a>
+						</nav>
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<div class="inner">
+							<h2>Menu</h2>
+							<ul class="links">
+								<li><a href="index.html#banner">Home</a></li>
+								<li><a href="index.html#to-the-projects">Projects</a></li>
+								<li><a href="index.html#footer">Contact</a></li>
+								<li><a href="courses.html">Accreditations</a></li>
+							</ul>
+							<a href="#" class="close">Close</a>
+						</div>
+					</nav>
+				<!-- Wrapper -->
+					<section id="wrapper">
+						<header>
+							<div class="inner">
+								<h2 class = "icon regular fa-file-code">RETURN PLACEHOLDERS</h2>
+								<p>WORKING PAPERS: EXCEL & VBA</p>
+							</div>
+
+						</header>
+
+						<!-- Content -->
+						<div class="wrapper">
+							<div class="inner">
+
+								<p>The preparer may wish to flag points to the manager. They may do this through the use of these hyperlinks and a centralised schedule. However, it would become annoying to have to find every new month and return them so a check box automates this process for the user.</p>
+								<h3 class="major">Initial Monthly Process (20mins)</h3>
+								<ol>
+									<li>Find and remove points from each schedule</li>
+									<li>Type point for manager on each sheet </li>
+									<li>Manager finds the point as they are reviewing</li>
+									<li>Manager edits review points for new information</li>
+								</ol>
+
+								<h3 class="major">New Monthly Process (5min)</h3>
+								<ol>
+									<li>Tick box to return placeholders</li>
+									<li>Type point on centralised schedule</li>
+									<li>Cut and Paste placeholder to relevant area</li>
+									<li>Manager reads centralised points at start of review</li>
+								</ol>
+								<section >
+									<h3 class="major icon solid fa-code-branch">CODE</h3>
+									<p>Create dynamic code to take in numbered placeholder Range</p>
+									<pre><code>Sub ReturnPlaceHolders()
+
+If Range(ActiveSheet.CheckBoxes(Application.Caller).LinkedCell).Value = True Then
+
+Dim I As Byte
+Dim ph As String
+Dim PFMPoint As String
+
+For I = 1 To 12
+
+ph = "PFM" & I & "ph"
+PFMPoint = "PFM" & I & "_"
+
+Dim ReturnCell As Range: Set ReturnCell = Range(ph)
+Dim ReturnArea As Range: Set ReturnArea = Range(PFMPoint).Offset(0, -1)
+
+ReturnCell.Cut ReturnArea
+
+Next I
+
+End If
+
+End Sub</code></pre>
+								</section>
+
+							</div>
+						</div>
+
+				</section>
+
+
+				<!-- Footer -->
+					<section id="footer">
+						<div class="inner">
+							<h2 class="major">Get in touch</h2>
+							<ul class="contact">
+								<li class="icon solid fa-envelope"><a href="mailto:SidTrengove@gmail.com">SidTrengove@gmail.com</a></li>
+								<li class="icon solid fa-envelope"><a href="mailto:sidney.trengove@chiene.co.uk">Sidney.Trengove@chiene.co.uk</a></li>
+								<li class="icon brands fa-linkedin"><a href="https://www.linkedin.com/in/sidney-trengove/" target="_blank">linkedin.com/in/sidney-trengove/</a></li>
+							</ul>
+							<ul class="copyright">
+								<li>&copy; Untitled Inc. All rights reserved.</li><li>Design: <a href="http://html5up.net" target="_blank">HTML5 UP</a></li>
+							</ul>
+						</div>
+					</section>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

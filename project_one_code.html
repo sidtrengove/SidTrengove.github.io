@@ -1,0 +1,151 @@
+<!DOCTYPE HTML>
+<!--
+	Solid State by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-4XRPD3TP16"></script>
+		<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'G-4XRPD3TP16');
+		</script>
+		<title>P1: Financial Dashboard</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<style> html{scroll-behavior: smooth} </style>
+	</head>
+	<body class="is-preload">
+
+		<!-- Page Wrapper -->
+			<div id="page-wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<ul class="icons">
+							<li><h1><a href="index.html">Home</a></h1></li>
+							<li><h1><a href="https://www.linkedin.com/in/sidney-trengove/" class="icon brands fa-linkedin"><span class="label" target="_blank">LinkedIn</a></h1></li>
+							<li><h1><a href="https://github.com/sidtrengove/PortfolioProjects" class="icon brands fa-github" target="_blank"></a></h1></li>
+						</ul>
+						<nav>
+							<a href="#menu">Menu</a>
+						</nav>
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<div class="inner">
+							<h2>Menu</h2>
+							<ul class="links">
+								<li><a href="index.html#banner">Home</a></li>
+								<li><a href="index.html#to-the-projects">Projects</a></li>
+								<li><a href="index.html#footer">Contact</a></li>
+								<li><a href="courses.html">Accreditations</a></li>
+							</ul>
+							<a href="#" class="close">Close</a>
+						</div>
+					</nav>
+
+				<!-- Wrapper -->
+					<section id="wrapper">
+						<section id="wrapper">
+							<header>
+								<div class="inner">
+									<h2 class = "icon regular fa-file-code">THE BUILD</h2>
+									<p>FINANCIAL DASHBOARD: PYTHON & POWER BI</p>
+									<p><a href="#insights" class="button primary fit icon solid solo fa-arrow-down scrolly">Insights below</a></p>
+									<p><a href="project_one.html" class="button small fit">Back to the overview</a></p>
+								</div>
+							</header>
+							<p id="insights"></p>
+	
+
+						<!-- Content -->
+							<div class="wrapper">
+								<div class="inner">
+
+									<h3 class="major">Introduction</h3>
+									<p>This is my all-star project. A <u>full data pipeline</u>, start to finish. A dashboard with unlimited potential, all for free! This code can be used to connect to up to 25 organisations, a price which spotlight charge £495 per month for, that’s around <u>£6K of savings a year</u>!</p>
+									<p>With a tweak to the code this project could easily be expanded to incorporate unlimited organisations which would generate costs savings in the <u>tens of thousands of pounds per annum </u>.  That’s something to ponder on.</p>
+									<p>Please take this with a <u>pinch of salt</u>! Spotlight is a full, ready made, platform of tools whereas this requires more effort to generate a similar outcome.</p>
+									<p>Just to think it’s really not too difficult: if you follow my journey that’s just <u>3-4 months</u> of hard work and you too could get yourself to the same stage, ready to build a project like this.</p>
+
+									<h3 class="major">Discovery</h3>
+									<p>After some brief learning to gain a base understanding of Python I felt curious enough to stumble into the <a href="https://developer.xero.com/" target="_blank">Xero Developer</a> world. I’m always strive for self-improvement and going through difficulties is an important part of that journey. This was, on the face of it, one difficult project for a beginner. So I started where most beginners start, finding a YouTube video to copy step by step. This is where I found Edgecate, a step-by-step tutorial, walking through a Jupyter notebook.  With a few changes I managed to use the Xero API to access one predetermined report. This was the first step on my journey.</p>
+									<a href="https://www.anaconda.com/"><img class="image fit" src="images/Jupyter.jpg" alt=""></a>
+									<p>It became rather clear from looking at the code I needed a better idea of what on earth was going on. I picked up <a href="https://read.amazon.co.uk/kp/embed?asin=B07J4521M3&preview=newtab&linkCode=kpe&ref_=cm_sw_r_kb_dp_9EJXW3KX29JVQ24GNVT5" target="_blank"> A Crash Course in Python form No Starch Press</a>.</p>
+									<p>After some brief understanding of APIs and Object-Oriented Programming (OOP) I manipulated the code into a better structure within a different IDE (atom) to run the full script.</p>
+									<p>Next I looked to pull in different types of reports but soon realised I needed an understanding of  Pandas & NumPy. <a href="https://www.youtube.com/c/AlexTheAnalyst" target="_blank">Alex The Analyst</a> has some great recommendations on this. <a href="https://www.udemy.com/share/101WaU3@p02ZtOpHq9YNxE-3evtz6CYGo-hZ6IrRI3ejpwHNUVxBODax9fUZiGSkZNFpu08C/" target="_blank">See the course I took here</a>.</p>
+									<h3 class="major">Python and Pandas</h3>
+									<p>Once I had the building blocks, it was a case of using the Xero documentation to piece the abstract thoughts together. There were two invaluable resources I used for this. The first was Xero’s API Explorer. A tool that lets you request whatever report you want from Xero outputting it in a JSON format (that was not easy task in flattening!).</p>
+									<p>The other tool was the documentation on from the <a href="https://github.com/XeroAPI/xero-python" target="_blank">XeroAPI GitHub</a>.</p>
+									<a href="https://api-explorer.xero.com/" target="_blank"><img class="image fit" src="images/Xero_API_explorer.JPG" alt=""></a>
+									<p>Both of the tools above offered help in working out what I need to do to get my reports form Xero in a <a href="https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.html" target="_blank">pandas.DataFrame</a>.</p>
+									<p>I finally did it! A Pandas DataFrame that contains a Trial Balance! But wait, what is somone going to do with this? Download Python and accompanying libraries, set up an IDE and run it to their command line? Surely, it’s easier at that point just to download the report from Xero manually? Well, at this stage you’d be right but it is only a half truth, a sub-section of the full picture, a pre cursor to the finished product.</p>
+									<h3 class="major">Visualisation</h3>
+									<p>At this point what I needed was a visualisation tool. Something that could make my code readable and useable by things other than cyborgs. This is when I approached the debate of Tableau and PowerBI. To put is simply, PowerBI allows for direct integrations using Python and SQL for free. Therefore it was a no brainer: PowerBI it was. Time for another course! Again, another top recommendation from <a href="https://www.youtube.com/c/AlexTheAnalyst" target="_blank">Alex The Analyst</a> settled that debate.</p>
+									<a href="https://www.udemy.com/share/101WGa3@awDJrPpvwLcvj0YhUEQy7kvzExy6AHr1T-2o1i1U6b3bOcl4mf4tVHaxhV3d7OQv/" target="_blank"><img class="image fit" src="images/power-bi-1.jpg" alt=""></a>
+									<p>With that knowledge under my belt, it was time to get the report into the software using Python to connect to the source. I thought a simple copy and paste of a few modules would do the trick. How wrong I was… PBI appears to limit the use of Python scripts to a single module, uh oh… Let the refactoring begin!</p>
+									<p>Now condensed into a single module it got me asking broader and more challenging questions? Could I get more reports in? Could I connect to more than one company? How far can I take this?</p>
+									<p>After some playing around and further refactoring, I produced code that could be generated form a simple call statement.</p>
+									<img class="image fit" src="images/API_call.JPG" alt="">
+									<p>Well that’s the reports in and a method to call them but the user cant change the parameters from the visualisation software at the moment? What if they want to change the date? After much googling and many tutorials (these guys these guys helped a bunch Guy in a Cube) I found PowerBI parameters. Using these I managed to insert them into my code to let the user update the date range they want ) I found PowerBI parameters. Using these I managed to insert them into my code to let the user update the date range they want to report on.</p>
+									<video id="PBI_param_vid" class="image fit" controls autoplay loop>
+										<source id="PBI_param_vid" src="videos/PBI_Param.mp4" type="video/mp4">
+										Your browser does not support the video tag.
+									</video>
+									<p>After the hard work was done, it was to use PowerBI to transform the data and input into some nice visuals for the user. And there you have it, one finished product and a full data pipeline!</p>
+									<video class="image fit" controls autoplay loop>
+										<source src="videos/PBI_Demo.mp4" type="video/mp4">
+										Your browser does not support the video tag.
+									</video>
+									<h3 class="major">Conclusion + Acknowledgements</h3>
+									<p>Hopefully the above acts as a guide for aspiring Data Analysts to show that although building a data pipeline can be tricky, you can go from zero to hero off your own back.</p>
+									<p>Thanks to <a href="https://www.linkedin.com/in/nathan-davis-593a46b1/" target="_blank">Nathan Davis</a> for encouraging some “Blue Sky” thinking and creating a great team at <a href="https://www.chiene.co.uk/" target="_blank">Chiene+Tait</a>: Evolve.</p>
+									<p>Thanks to <a href="https://www.youtube.com/c/AlexTheAnalyst" target="_blank">Alex The Analyst</a> for offering a map to the mystical realms of Data Analytics.</p>
+									<p>As always, please feel free to reach out <a href="https://www.linkedin.com/in/sidney-trengove/" target="_blank">@SidTrengove</a>.</p>
+
+								</div>
+							</div>
+
+						</section>
+					</section>
+
+				<!-- Footer -->
+				<section id="footer">
+					<div class="inner">
+						<h2 class="major">Get in touch</h2>
+						<ul class="contact">
+							<li class="icon solid fa-envelope"><a href="mailto:SidTrengove@gmail.com">SidTrengove@gmail.com</a></li>
+							<li class="icon solid fa-envelope"><a href="mailto:sidney.trengove@chiene.co.uk">Sidney.Trengove@chiene.co.uk</a></li>
+							<li class="icon brands fa-linkedin"><a href="https://www.linkedin.com/in/sidney-trengove/" target="_blank">linkedin.com/in/sidney-trengove/</a></li>
+						</ul>
+						<ul class="copyright">
+							<li>&copy; Untitled Inc. All rights reserved.</li><li>Design: <a href="http://html5up.net" target="_blank">HTML5 UP</a></li>
+						</ul>
+					</div>
+				</section>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+			<script>
+				var vid = document.getElementById("PBI_param_vid");
+					vid.playbackRate = 2.0;
+			</script> 
+
+	</body>
+</html>

@@ -1,0 +1,139 @@
+<!DOCTYPE HTML>
+<!--
+	Solid State by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-4XRPD3TP16"></script>
+		<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'G-4XRPD3TP16');
+		</script>
+		<title>P2: London</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<style> html{scroll-behavior: smooth} </style>
+	</head>
+	<body class="is-preload">
+
+		<!-- Page Wrapper -->
+			<div id="page-wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<ul class="icons">
+							<li><h1><a href="index.html">Home</a></h1></li>
+							<li><h1><a href="https://www.linkedin.com/in/sidney-trengove/" class="icon brands fa-linkedin" target="_blank"><span class="label">LinkedIn</a></h1></li>
+							<li><h1><a href="https://github.com/sidtrengove/PortfolioProjects" class="icon brands fa-github" target="_blank"></a></h1></li>
+						</ul>
+						<nav>
+							<a href="#menu">Menu</a>
+						</nav>
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<div class="inner">
+							<h2>Menu</h2>
+							<ul class="links">
+								<li><a href="index.html#banner">Home</a></li>
+								<li><a href="index.html#to-the-projects">Projects</a></li>
+								<li><a href="index.html#footer">Contact</a></li>
+								<li><a href="courses.html">Accreditations</a></li>
+							</ul>
+							<a href="#" class="close">Close</a>
+						</div>
+					</nav>
+
+				<!-- Wrapper -->
+					<section id="wrapper">
+						<section id="wrapper">
+							<header>
+								<div class="inner">
+									<h2 class = "">Machine Learning: Monthly</h2>
+									<p>Monthly Data with few variables</p>
+									<p><a href="#insights" class="button primary fit icon solid solo fa-arrow-down scrolly">Insights below</a></p>
+									<p><a href="project_two_code_eight.html#models" class="button small fit">Back to Machine Learning overview</a></p>
+								</div>
+							</header>
+							<p id="insights"></p>
+	
+
+						<!-- Content -->
+							<div class="wrapper">
+								<div class="inner">
+
+									<h3 class="major">Monthly</h3>
+									<p>With machine learning models we need to split our data. First into the variables we are going to predict and the variables we will use to gear our predictions (y and x respectively).</p>
+									<p>Now it’s time to split our data into a training set and a testing set! Using sklearn to split data into a training set and a testing set. We do this so that we have something to measure our model against (test set). The data is split 70% training set and 30% testing set. The random state being set to 1 means that the data will be randomised in the same manner each time we run our model (producing roughly same results each time).</p>
+									<img class="image fit" src="images/ml_tts_month.JPG" alt="">
+									<p>Our machine learning algorithm just sees numbers — if there is a vast difference in the range say few ranging in thousands and few ranging in the tens, and it makes the underlying assumption that higher ranging numbers have superiority of some sort. This is why we must scale our X variables.</p>
+									<img class="image fit" src="images/ml_scale_month.JPG" alt="">
+									<p>Now we could start with our sklearn cheat sheet to help us pick an appropriate model.</p>
+									<img class="image fit" src="images/ml_map.jpg" alt="">
+									<p>Using our map, we end up at the SDG Regressor. However often what is easiest with a smaller dataset such as this it is often easiest to run allot of models on our dataset to see which produces the best result (which we can measure using the error metrics we will discuss later).</p>
+									<img class="image fit" src="images/ml_trained_monthly.JPG" alt="">
+									<p>Now that our models our trained we can use error metrics to measure their accuracy RMSE being the most reliable measure of those described below.</p>
+									<img class="image fit" src="images/ml_errormetrics.JPG" alt="">
+									<p>As RMSE is the most reliable of the bunch above we shall take this to measure to the reliability of our trained models.</p>
+									<img class="image fit" src="images/ml_RMSE_monthly.JPG" alt="">
+									<p>However, it is recommended to use <b>R-Squared</b> or rather adjusted R-Squared for evaluating the model performance of the <b>regression</b> models. This is primarily because R-Squared <b>captures the fraction of response variance</b> captured by the regression and tend to give better picture of quality of regression model.</p>
+									<img class="image fit" src="images/R_squared.JPG" alt="">
+									<p>As we can see from our results the SDGRegressor was outperformed by many models. The best of which was the Random Forest. There have been many papers written about Random Forests and their amazing accuracy.</p>
+									<p><b>Random Forest</b> seems to be the <b>best</b> model at an <b>RMSE</b> of <b>£15,282</b> and an <b>R squared</b> of <b>0.9948</b>.</p>
+									<p><b>Given the number of houses sold we can predict the average future house price within £15,282</b>.</p>
+
+									<section>
+										<div class="row">
+										<div class="col-6 col-12-medium">
+											<p></p>
+											<p><a href="project_two_code_eight_three.html" class="button fit">Prev</a></p>
+										</div>
+										<div class="col-6 col-12-medium">
+											<p></p>
+											<p><a href="project_two_code_eight_five.html" class="button primary fit">Next</a></p>
+										</div>
+										</div>
+									</section>
+
+								</div>
+							</div>
+							
+						</section>
+
+					</section>
+
+				<!-- Footer -->
+				<section id="footer">
+					<div class="inner">
+						<h2 class="major">Get in touch</h2>
+						<ul class="contact">
+							<li class="icon solid fa-envelope"><a href="mailto:SidTrengove@gmail.com">SidTrengove@gmail.com</a></li>
+							<li class="icon solid fa-envelope"><a href="mailto:sidney.trengove@chiene.co.uk">Sidney.Trengove@chiene.co.uk</a></li>
+							<li class="icon brands fa-linkedin"><a href="https://www.linkedin.com/in/sidney-trengove/" target="_blank">linkedin.com/in/sidney-trengove/</a></li>
+						</ul>
+						<ul class="copyright">
+							<li>&copy; Untitled Inc. All rights reserved.</li><li>Design: <a href="http://html5up.net" target="_blank">HTML5 UP</a></li>
+						</ul>
+					</div>
+				</section>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+	</body>
+</html>

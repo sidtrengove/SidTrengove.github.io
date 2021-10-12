@@ -1,0 +1,154 @@
+<!DOCTYPE HTML>
+<!--
+	Solid State by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-4XRPD3TP16"></script>
+		<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'G-4XRPD3TP16');
+		</script>
+		<title>P2: London</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<style> html{scroll-behavior: smooth} </style>
+	</head>
+	<body class="is-preload">
+
+		<!-- Page Wrapper -->
+			<div id="page-wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<ul class="icons">
+							<li><h1><a href="index.html">Home</a></h1></li>
+							<li><h1><a href="https://www.linkedin.com/in/sidney-trengove/" class="icon brands fa-linkedin" target="_blank"><span class="label">LinkedIn</a></h1></li>
+							<li><h1><a href="https://github.com/sidtrengove/PortfolioProjects" class="icon brands fa-github" target="_blank"></a></h1></li>
+						</ul>
+						<nav>
+							<a href="#menu">Menu</a>
+						</nav>
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<div class="inner">
+							<h2>Menu</h2>
+							<ul class="links">
+								<li><a href="index.html#banner">Home</a></li>
+								<li><a href="index.html#to-the-projects">Projects</a></li>
+								<li><a href="index.html#footer">Contact</a></li>
+								<li><a href="courses.html">Accreditations</a></li>
+							</ul>
+							<a href="#" class="close">Close</a>
+						</div>
+					</nav>
+
+				<!-- Wrapper -->
+					<section id="wrapper">
+						<section id="wrapper">
+							<header>
+								<div class="inner">
+									<h2 class = "">Step six: SEABORN</h2>
+									<p>A brief EDA using Seaborn</p>
+									<p><a href="#insights" class="button primary fit icon solid solo fa-arrow-down scrolly">Insights below</a></p>
+									<p><a href="project_two_code.html" class="button small fit">Back to the analysis</a></p>
+								</div>
+							</header>
+							<p id="insights"></p>
+	
+
+						<!-- Content -->
+							<div class="wrapper">
+								<div class="inner">
+
+									<h3 class="major">Seaborn</h3>
+									<p>Seaborn is a data visualization library built on top of matplotlib and closely integrated with pandas data structures in Python. This will allow us to conduct a brief EDA very easily.</p>
+									<a href="https://github.com/sidtrengove/PortfolioProjects/blob/6d1700823f298fb82c25b3dbc86a60dac49c794b/London%20-%20Clean,%20EDA%20&%20ML.ipynb" target="blank"><img class="image fit" src="images/EDA_seaborn.jpg" alt=""></a>
+									<p><a href="https://github.com/sidtrengove/PortfolioProjects/blob/6d1700823f298fb82c25b3dbc86a60dac49c794b/London%20-%20Clean,%20EDA%20&%20ML.ipynb" class="button primary fit small" target="_blank">full notebook</a></p>
+
+									<h3 class="major">EDA</h3>
+									<p>Looks like our data is almost normally distributed with a few houses dotted up towards the upper end.</p>
+									<a href="https://github.com/sidtrengove/PortfolioProjects/blob/6d1700823f298fb82c25b3dbc86a60dac49c794b/London%20-%20Clean,%20EDA%20&%20ML.ipynb" target="blank"><img class="image fit" src="images/EDA_avg_price_code.JPG" alt=""></a>
+
+									<p>We can use a heatmap combined with a correlation function on our dataset to represent the relationships between our data columns.</p>
+									<p>From this analysis we can see that, as expected, the average price of houses has the highest correlation with hourly pay. In fact, the female hourly pay has the highest correlation with average house price.</p>
+									<a href="https://github.com/sidtrengove/PortfolioProjects/blob/6d1700823f298fb82c25b3dbc86a60dac49c794b/London%20-%20Clean,%20EDA%20&%20ML.ipynb" target="blank"><img class="image fit" src="images/EDA_corr_code.JPG" alt=""></a>
+
+									<p>We can demonstrate this relationship using lmplot which creates a regression plot. We see that as we’d expect, as the wages increase, so do the house prices.</p>
+									<a href="https://github.com/sidtrengove/PortfolioProjects/blob/6d1700823f298fb82c25b3dbc86a60dac49c794b/London%20-%20Clean,%20EDA%20&%20ML.ipynb" target="blank"><img class="image fit" src="images/EDA_fem_price_code.JPG" alt=""></a>
+
+									<p>Having grew up in Kingston Upon Thames this data is of particular interest to me. Let’s examine the gender demographic of our dataset. We can see that there are roughly similar numbers of males and females each year. The number of females is slightly greater, this is likely due to the higher life expectancy of females.</p>
+									<a href="https://github.com/sidtrengove/PortfolioProjects/blob/6d1700823f298fb82c25b3dbc86a60dac49c794b/London%20-%20Clean,%20EDA%20&%20ML.ipynb" target="blank"><img class="image fit" src="images/EDA_fem_male_code.JPG" alt=""></a>
+
+									<p>We can represent this more visually on a jointplot. </p>
+									<a href="https://github.com/sidtrengove/PortfolioProjects/blob/6d1700823f298fb82c25b3dbc86a60dac49c794b/London%20-%20Clean,%20EDA%20&%20ML.ipynb" target="blank"><img class="image fit" src="images/EDA_fem_male_code_graph.JPG" alt=""></a>
+
+									<p>With a bit of feature engineering, we can do further trend analysis on our data. Let’s split our data into month and year columns.</p>
+									<a href="https://github.com/sidtrengove/PortfolioProjects/blob/6d1700823f298fb82c25b3dbc86a60dac49c794b/London%20-%20Clean,%20EDA%20&%20ML.ipynb" target="blank"><img class="image fit" src="images/EDA_feature_eng.JPG" alt=""></a>
+
+									<p>Now that we have the months separated out, we can see that house prices tend to peak at the end of the year as expected due to prices increasing over time. However interestingly we also see house prices tend to drop in June each year followed by a rapid increase for the latter half of the year.</p>
+									<a href="https://github.com/sidtrengove/PortfolioProjects/blob/6d1700823f298fb82c25b3dbc86a60dac49c794b/London%20-%20Clean,%20EDA%20&%20ML.ipynb" target="blank"><img class="image fit" src="images/EDA_monthly.JPG" alt=""></a>
+
+									<p>We can pivot our data so that we have months against years. This is similar to a pivot table in excel.</p>
+									<a href="https://github.com/sidtrengove/PortfolioProjects/blob/6d1700823f298fb82c25b3dbc86a60dac49c794b/London%20-%20Clean,%20EDA%20&%20ML.ipynb" target="blank"><img class="image fit" src="images/EDA_pivot.JPG" alt=""></a>
+
+									<p>We can use our pivoted data in a heatmap demonstrating the trend of values. As we’d expect the average prices increase over time.</p>
+									<a href="https://github.com/sidtrengove/PortfolioProjects/blob/6d1700823f298fb82c25b3dbc86a60dac49c794b/London%20-%20Clean,%20EDA%20&%20ML.ipynb" target="blank"><img class="image fit" src="images/EDA_pivot_heat.JPG" alt=""></a>
+
+
+									<section>
+										<div class="row">
+										<div class="col-6 col-12-medium">
+											<p></p>
+											<p><a href="project_two_code_five.html" class="button fit">Prev</a></p>
+										</div>
+										<div class="col-6 col-12-medium">
+											<p></p>
+											<p><a href="project_two_code_seven.html" class="button primary fit">Next</a></p>
+										</div>
+										</div>
+									</section>
+
+								</div>
+							</div>
+							
+						</section>
+
+					</section>
+
+				<!-- Footer -->
+				<section id="footer">
+					<div class="inner">
+						<h2 class="major">Get in touch</h2>
+						<ul class="contact">
+							<li class="icon solid fa-envelope"><a href="mailto:SidTrengove@gmail.com">SidTrengove@gmail.com</a></li>
+							<li class="icon solid fa-envelope"><a href="mailto:sidney.trengove@chiene.co.uk">Sidney.Trengove@chiene.co.uk</a></li>
+							<li class="icon brands fa-linkedin"><a href="https://www.linkedin.com/in/sidney-trengove/" target="_blank">linkedin.com/in/sidney-trengove/</a></li>
+						</ul>
+						<ul class="copyright">
+							<li>&copy; Untitled Inc. All rights reserved.</li><li>Design: <a href="http://html5up.net" target="_blank">HTML5 UP</a></li>
+						</ul>
+					</div>
+				</section>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+	</body>
+</html>

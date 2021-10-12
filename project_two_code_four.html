@@ -1,0 +1,173 @@
+<!DOCTYPE HTML>
+<!--
+	Solid State by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-4XRPD3TP16"></script>
+		<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'G-4XRPD3TP16');
+		</script>
+		<title>P2: London</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<style> html{scroll-behavior: smooth} </style>
+	</head>
+	<body class="is-preload">
+
+		<!-- Page Wrapper -->
+			<div id="page-wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<ul class="icons">
+							<li><h1><a href="index.html">Home</a></h1></li>
+							<li><h1><a href="https://www.linkedin.com/in/sidney-trengove/" class="icon brands fa-linkedin" target="_blank"><span class="label">LinkedIn</a></h1></li>
+							<li><h1><a href="https://github.com/sidtrengove/PortfolioProjects" class="icon brands fa-github" target="_blank"></a></h1></li>
+						</ul>
+						<nav>
+							<a href="#menu">Menu</a>
+						</nav>
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<div class="inner">
+							<h2>Menu</h2>
+							<ul class="links">
+								<li><a href="index.html#banner">Home</a></li>
+								<li><a href="index.html#to-the-projects">Projects</a></li>
+								<li><a href="index.html#footer">Contact</a></li>
+								<li><a href="courses.html">Accreditations</a></li>
+							</ul>
+							<a href="#" class="close">Close</a>
+						</div>
+					</nav>
+
+				<!-- Wrapper -->
+					<section id="wrapper">
+						<section id="wrapper">
+							<header>
+								<div class="inner">
+									<h2 class = "">Step four: PANDAS</h2>
+									<p>Cleaning using Python & Pandas</p>
+									<p><a href="#insights" class="button primary fit icon solid solo fa-arrow-down scrolly">Insights below</a></p>
+									<p><a href="project_two_code.html" class="button small fit">Back to the analysis</a></p>
+								</div>
+							</header>
+							<p id="insights"></p>
+	
+
+						<!-- Content -->
+							<div class="wrapper">
+								<div class="inner">
+
+									<h3 class="major">Pandas</h3>
+									<p>Unfortunately, we are not talking about Pandas the animal here. Pandas is a fast, powerful, flexible and easy to use open-source data analysis and manipulation tool, built on top of the Python programming language.</p>
+									<p>The name is actually derived from the term “panel data”, an econometrics term for multidimensional structured data sets.</p>
+									<img class="image fit" src="images/pandas_pic.jpg" alt="">
+
+									<h3 class="major">Python</h3>
+									<p>You may be wondering what is Python? More animals? What is it with coding and animals?! Python is an interpreted, object-oriented, high-level programming language with dynamic semantics.</p>
+									<img class="image fit" src="images/python_pic.jpg" alt="">
+
+									<h3 class="major">Jupyter notebooks</h3>
+									<p>Whilst it is cool to run full python scripts that complete allot of tasks, when completing data analysis or cleaning data, it is easier to execute our code section by section. We can then react easily to our results and adapt our code to explore different avenues based upon our findings. This is where Jupyter notebooks come in.</p>
+									<img class="image fit" src="images/Jupyter_pic.JPG" alt="">
+									<p><a href="https://github.com/sidtrengove/PortfolioProjects/blob/6d1700823f298fb82c25b3dbc86a60dac49c794b/London%20-%20Clean,%20EDA%20&%20ML.ipynb" class="button primary fit small" target="_blank">full notebook</a></p>
+									
+									<h3 class="major">Set Up</h3>
+									<p>We start off our code by importing our libraires we will need along with a few presentational formats.</p>
+									<a href="https://github.com/sidtrengove/PortfolioProjects/blob/6d1700823f298fb82c25b3dbc86a60dac49c794b/London%20-%20Clean,%20EDA%20&%20ML.ipynb" target="blank"><img class="image fit" src="images/pandas_one.JPG" alt=""></a>
+
+									<h3 class="major">Import and view our datasets</h3>
+									<p>We exported our datasets from SQL in two tables. One which contains monthly housing data and the other contains the yearly data with many more columns. We can use df.head() to see a preview of our datasets quickly and easily.</p>
+									<a href="https://github.com/sidtrengove/PortfolioProjects/blob/6d1700823f298fb82c25b3dbc86a60dac49c794b/London%20-%20Clean,%20EDA%20&%20ML.ipynb" target="blank"><img class="image fit" src="images/pandas_two.JPG" alt=""></a>
+
+									<h3 class="major">Monthly Data</h3>
+									<p>It’s always good to get an insight into our data before we start going about trying to clean anything. We can then get a good idea of what areas we need to focus on. </p>
+									<p>Looks like we have 14,355 rows of data, a mean house price of £275,571 and 3,834 houses sold in a month on one area. The maximum house price was £1,463,377.92 and 132,163 houses sold in a month in one area.</p>
+									<p>Our data looks pretty clean thanks to our work in SQL. The houses sold column looks to be the only one with missing values.</p>
+									<a href="https://github.com/sidtrengove/PortfolioProjects/blob/6d1700823f298fb82c25b3dbc86a60dac49c794b/London%20-%20Clean,%20EDA%20&%20ML.ipynb" target="blank"><img class="image fit" src="images/pandas_three.JPG" alt=""></a>
+
+									<p>We shall deal with the missing values by dropping the rows form the dataset. This is a task made simple with pandas.</p>
+									<a href="https://github.com/sidtrengove/PortfolioProjects/blob/6d1700823f298fb82c25b3dbc86a60dac49c794b/London%20-%20Clean,%20EDA%20&%20ML.ipynb" target="blank"><img class="image fit" src="images/pandas_four.JPG" alt=""></a>
+
+									<p>We have now removed all missing data from our monthly dataset.</p>
+									<a href="https://github.com/sidtrengove/PortfolioProjects/blob/6d1700823f298fb82c25b3dbc86a60dac49c794b/London%20-%20Clean,%20EDA%20&%20ML.ipynb" target="blank"><img class="image fit" src="images/pandas_five.JPG" alt=""></a>
+
+									<h3 class="major">Annual Data</h3>
+									<p>We can start by getting a description of our data. There are allot columns here but to pick a few the average age seems to be what we’d expect 44, being around middle age telling us this column is likely to have a normal distribution. We can also tell our data is made up mostly of boroughs as our average borough flag is close to 1. We also have around 140,916 rows of data, that’s allot of data! How could we ever handle all this data -> pandas!</p>
+									<a href="https://github.com/sidtrengove/PortfolioProjects/blob/6d1700823f298fb82c25b3dbc86a60dac49c794b/London%20-%20Clean,%20EDA%20&%20ML.ipynb" target="blank"><img class="image fit" src="images/pandas_five_two.JPG" alt=""></a>
+
+									<p>This data contains allot more columns. As we combined our data using a LEFT OUTER JOIN, we know that all data in the furthest left columns will be fully complete. However, if there was no match in the table we joined, on the value we joined on, then we end up with a missing value. This is represented by a gap in our diagram.</p>
+									<a href="https://github.com/sidtrengove/PortfolioProjects/blob/6d1700823f298fb82c25b3dbc86a60dac49c794b/London%20-%20Clean,%20EDA%20&%20ML.ipynb" target="blank"><img class="image fit" src="images/pandas_six.JPG" alt=""></a>
+
+									<p>We can arrange our missing values into a table and sort by the highest number of missing values. I explain why which columns we will drop at the bottom of this image. We are able to do this due to the ability to use markdown in Jupyter notebooks.</p>
+									<a href="https://github.com/sidtrengove/PortfolioProjects/blob/6d1700823f298fb82c25b3dbc86a60dac49c794b/London%20-%20Clean,%20EDA%20&%20ML.ipynb" target="blank"><img class="image fit" src="images/pandas_seven.JPG" alt=""></a>
+
+									<p>Once we have dropped the value, we have outlined then we can reinspect our data. Our data looks much cleaner! Although we have lost around 25,000 rows of data, many of these were blank and hinder our EDA and machine learning models accuracy.</p>
+									<a href="https://github.com/sidtrengove/PortfolioProjects/blob/6d1700823f298fb82c25b3dbc86a60dac49c794b/London%20-%20Clean,%20EDA%20&%20ML.ipynb" target="blank"><img class="image fit" src="images/pandas_eight.JPG" alt=""></a>
+
+									<p>To decipher why we still having missing values becomes an easier task due to our work in SQL. When performing the analysis for each dataset we examined the dates that each table covered. The columns which contain missing values, being recycling and pay, only run from 2004-2019.Whereas our data currently runs from 1995 until 2021. We shall drop the dates outside our matched date range.</p>
+									<a href="https://github.com/sidtrengove/PortfolioProjects/blob/6d1700823f298fb82c25b3dbc86a60dac49c794b/London%20-%20Clean,%20EDA%20&%20ML.ipynb" target="blank"><img class="image fit" src="images/pandas_nine.JPG" alt=""></a>
+
+									<p>We are also still to remove the boroughs which do not have a match. We can do this by running a search of the total hourly pay column. This returns a series and using this to produce the related unique values in the area column. We can then remove these boroughs from our dataset.</p>
+									<p>Now we have a very clean dataset with every row now containing a match in all other columns. This is perfect for our machine learning models and EDA. Our data now represents 29 boroughs for the data range 2014-2020.</p>
+									<a href="https://github.com/sidtrengove/PortfolioProjects/blob/6d1700823f298fb82c25b3dbc86a60dac49c794b/London%20-%20Clean,%20EDA%20&%20ML.ipynb" target="blank"><img class="image fit" src="images/pandas_ten.JPG" alt=""></a>
+
+									<section>
+										<div class="row">
+										<div class="col-6 col-12-medium">
+											<p></p>
+											<p><a href="project_two_code_three.html" class="button fit">Prev</a></p>
+										</div>
+										<div class="col-6 col-12-medium">
+											<p></p>
+											<p><a href="project_two_code_five.html" class="button primary fit">Next</a></p>
+										</div>
+										</div>
+									</section>
+
+								</div>
+							</div>
+							
+						</section>
+
+					</section>
+
+				<!-- Footer -->
+				<section id="footer">
+					<div class="inner">
+						<h2 class="major">Get in touch</h2>
+						<ul class="contact">
+							<li class="icon solid fa-envelope"><a href="mailto:SidTrengove@gmail.com">SidTrengove@gmail.com</a></li>
+							<li class="icon solid fa-envelope"><a href="mailto:sidney.trengove@chiene.co.uk">Sidney.Trengove@chiene.co.uk</a></li>
+							<li class="icon brands fa-linkedin"><a href="https://www.linkedin.com/in/sidney-trengove/" target="_blank">linkedin.com/in/sidney-trengove/</a></li>
+						</ul>
+						<ul class="copyright">
+							<li>&copy; Untitled Inc. All rights reserved.</li><li>Design: <a href="http://html5up.net" target="_blank">HTML5 UP</a></li>
+						</ul>
+					</div>
+				</section>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+	</body>
+</html>
